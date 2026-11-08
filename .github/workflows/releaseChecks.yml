@@ -1,0 +1,39 @@
+name: releaseChecks
+on:
+  push:
+    paths:
+      - "packaging/**"
+      - "scripts/**"
+      - "publish.sh"
+  pull_request:
+    paths:
+      - "packaging/**"
+      - "scripts/**"
+      - "publish.sh"
+jobs:
+  lintPackaging:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: checkShellScripts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+          shellcheck packaging/linux/installApp.sh packaging/linux/uninstallApp.sh scripts/makeRelease.sh publish.sh
+      - name: checkDesktopEntry
+        run: |
+          sudo apt-get install -y desktop-file-utils
+          desktop-file-validate packaging/linux/io.inirmovies.app.desktop
+      - name: checkPowerShellScripts
+        shell: pwsh
+        run: |
+          $failed = $false
+          foreach ($file in Get-ChildItem packaging/windows -Filter *.ps1) {
+            $errors = $null
+            [System.Management.Automation.Language.Parser]::ParseFile($file.FullName, [ref]$null, [ref]$errors) | Out-Null
+            if ($errors.Count -gt 0) {
+              $errors | ForEach-Object { Write-Error $_.Message }
+              $failed = $true
+            }
+          }
+          if ($failed) { exit 1 }
