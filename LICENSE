@@ -1,0 +1,88 @@
+iNir Movies - Proprietary Software License
+Copyright (c) 2026 TheDinnx. All rights reserved.
+
+1. Scope
+
+This license applies to the compiled iNir Movies application distributed
+through this repository's Releases. It does not apply to the packaging
+files in this repository (install scripts, release scripts, the desktop
+entry and the icon), which may be copied, modified and redistributed
+freely for the purpose of installing or packaging iNir Movies.
+
+2. Grant of license
+
+Subject to the terms below, you are granted a free, non-exclusive,
+non-transferable license to download, install and run the compiled
+application for your own personal or internal use, on any number of
+devices you own or control.
+
+3. Restrictions
+
+You may not, and may not permit or assist any third party to:
+
+  a. decompile, disassemble, reverse engineer, or otherwise attempt to
+     derive the source code, algorithms, or embedded resources of the
+     application, except to the extent such restriction is expressly
+     prohibited by applicable law;
+  b. extract, recover, or otherwise obtain any API key, credential, or
+     other secret embedded in the application;
+  c. remove, obscure, or alter any copyright, trademark, or other
+     proprietary notice contained in the application;
+  d. modify the compiled application, or distribute a modified copy of
+     it, whether as a standalone file or bundled with other software;
+  e. redistribute the compiled application other than unmodified, in
+     the form published in this repository's Releases, with this
+     license and attribution intact;
+  f. sublicense, sell, rent, lease, or otherwise transfer rights to the
+     application separately from this license;
+  g. use the application, or any part of it, to build a competing
+     product or service.
+
+4. Intellectual property
+
+The application, including its interface, design, icon, and all
+associated content, is and remains the exclusive property of TheDinnx.
+No rights are granted to you other than those expressly set out in
+this license.
+
+5. Third-party components
+
+The application uses third-party software components (including, among
+others, Qt/PySide6 and mpv), each governed by its own license. Nothing
+in this license limits or extends the terms of those third-party
+licenses.
+
+6. No warranty
+
+The application is provided "as is", without warranty of any kind,
+express or implied, including but not limited to the warranties of
+merchantability, fitness for a particular purpose, and
+non-infringement. The entire risk as to the quality and performance of
+the application is with you.
+
+7. Limitation of liability
+
+To the maximum extent permitted by applicable law, in no event shall
+TheDinnx be liable for any special, incidental, indirect, or
+consequential damages whatsoever arising out of or in connection with
+the use of, or inability to use, the application, even if advised of
+the possibility of such damages.
+
+8. Termination
+
+This license terminates automatically, without notice, if you breach
+any of its terms. Upon termination you must stop using the application
+and delete all copies in your possession or control.
+
+9. Changes to this license
+
+Future versions of the application may be released under a revised
+license. A revised license applies only to the version it accompanies
+and does not retroactively change the terms under which you obtained
+an earlier version.
+
+10. Entire agreement
+
+This license is the entire agreement between you and TheDinnx
+regarding the application and supersedes any prior agreements or
+understandings, whether written or oral, regarding its subject matter.
