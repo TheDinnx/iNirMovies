@@ -1,0 +1,7 @@
+build/
+dist/*
+!dist/.gitkeep
+*.tar.gz
+*.zip
+*.exe
+SHA256SUMS
