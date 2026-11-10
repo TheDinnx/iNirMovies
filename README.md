@@ -88,14 +88,15 @@ yay -Syu inir-movies
 
 1. Download `iNirMovies-windows.zip` from
    [Releases](../../releases/latest) and extract it anywhere.
-2. Double-click `Install.bat`. It installs the app for your user,
-   adds a Start Menu shortcut and installs [mpv](https://mpv.io) with
-   winget if it is missing.
+2. Double-click `Install.bat`. It installs the app for your user and
+   adds a Start Menu shortcut. Everything the app needs, a shell and
+   mpv, is included in the `tools` folder, so there is nothing else to
+   install.
 3. Launch **iNir Movies** from the Start Menu.
 
 No installer is required to just try it: `iNirMovies.exe` also runs
-directly from the extracted folder as long as `mpv.exe` is on your
-`PATH`.
+directly from the extracted folder, as long as the `tools` folder stays
+next to it.
 
 ## Updating
 
@@ -119,7 +120,7 @@ Windows: open **Settings > Apps > Installed apps**, select
 |---|---|
 | Earthlink internet connection | Cinemana is only reachable on Earthlink |
 | Linux or Windows, x86_64 | the release binaries target these platforms |
-| [mpv](https://mpv.io) | plays movies, shows and channels |
+| [mpv](https://mpv.io) (Linux only) | plays movies, shows and channels, bundled on Windows |
 | xcb-util-cursor (Linux only) | required by the Qt/XCB platform plugin |
 | curl and iproute2 (Linux only) | network helpers used by the app |
 
@@ -149,7 +150,7 @@ iNirMovies/
 This repository hosts packaging files only: the install scripts, the
 desktop entry, the icon and the docs. The application itself is a
 closed, compiled binary attached to each [Release](../../releases);
-its interface and resources are compiled and obfuscated, and the
+its interface and resources are compiled into the executable, and the
 source is not published. See [SECURITY.md](SECURITY.md) for why, and
 [CONTRIBUTING.md](CONTRIBUTING.md) for what kind of contributions are
 welcome here.
