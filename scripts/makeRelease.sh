@@ -9,6 +9,7 @@ tag="v$version"
 build="$root/build"
 linuxBin="$root/dist/iNirMovies"
 windowsBin="$root/dist/iNirMovies.exe"
+windowsTools="$root/dist/tools"
 
 for tool in gh zip tar sha256sum; do
     if ! command -v "$tool" >/dev/null 2>&1; then
@@ -23,6 +24,11 @@ for bin in "$linuxBin" "$windowsBin"; do
         exit 1
     fi
 done
+
+if [ ! -f "$windowsTools/git/usr/bin/bash.exe" ] || [ ! -f "$windowsTools/mpv/mpv.exe" ]; then
+    echo "Missing dist/tools (bundled bash and mpv for Windows). Build it with the iNirMovies-build workflow first." >&2
+    exit 1
+fi
 
 rm -rf "$build"
 mkdir -p "$build/stage/linux/iNirMovies" "$build/stage/windows/iNirMovies"
@@ -42,6 +48,7 @@ install -m 644 packaging/windows/installApp.ps1 "$windowsStage/installApp.ps1"
 install -m 644 packaging/windows/uninstallApp.ps1 "$windowsStage/uninstallApp.ps1"
 install -m 644 packaging/windows/Install.bat "$windowsStage/Install.bat"
 install -m 644 packaging/windows/Uninstall.bat "$windowsStage/Uninstall.bat"
+cp -r "$windowsTools" "$windowsStage/tools"
 install -m 644 LICENSE "$windowsStage/LICENSE"
 install -m 644 VERSION "$windowsStage/VERSION"
 
