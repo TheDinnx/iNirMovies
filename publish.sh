@@ -40,7 +40,7 @@ fi
 
 commits=(
     ".gitignore|chore(git): ignore build output and release binaries"
-    "VERSION|chore(release): set version to 7.8.5"
+    "VERSION|chore(release): bump version to 7.8.6"
     "LICENSE|docs(license): scope license to GitHub Releases distribution"
     "assets/icons/appIcon.svg|feat(assets): add application icon"
     "assets/screenshots/.gitkeep|chore(assets): add screenshots directory"
@@ -48,21 +48,21 @@ commits=(
     "packaging/linux/io.inirmovies.app.desktop|feat(linux): add desktop entry"
     "packaging/linux/installApp.sh|feat(linux): add user-level install script"
     "packaging/linux/uninstallApp.sh|feat(linux): add uninstall script"
-    "packaging/windows/installApp.ps1|feat(windows): add installer with Start Menu shortcut and mpv check"
+    "packaging/windows/installApp.ps1|fix(windows): install the bundled bash and mpv tools and drop the winget step"
     "packaging/windows/uninstallApp.ps1|feat(windows): add uninstaller with Apps and Features entry"
     "packaging/windows/Install.bat|feat(windows): add double-click install launcher"
     "packaging/windows/Uninstall.bat|feat(windows): add double-click uninstall launcher"
-    "scripts/makeRelease.sh|feat(release): build Linux and Windows archives and publish the GitHub release"
-    "publish.sh|feat(release): add one-command repository and release publisher"
+    "scripts/makeRelease.sh|feat(release): ship the bundled Windows tools inside the Windows archive"
+    "publish.sh|chore(release): update commit messages for 7.8.6"
     ".github/workflows/releaseChecks.yml|ci: lint shell scripts, desktop entry and PowerShell scripts"
     ".github/ISSUE_TEMPLATE/bugReport.md|docs(github): add bug report template with platform and ISP fields"
     ".github/ISSUE_TEMPLATE/featureRequest.md|docs(github): add feature request template"
     ".github/PULL_REQUEST_TEMPLATE.md|docs(github): add pull request template"
     "SECURITY.md|docs(security): add security policy"
     "CONTRIBUTING.md|docs(contributing): describe repository layout and contribution rules"
-    "docs/FAQ.md|fix(docs): correct update steps and add Cinemana and Earthlink answers"
-    "docs/CHANGELOG.md|docs(changelog): add 7.8.5 release notes"
-    "README.md|docs(readme): document Cinemana, Earthlink-only support and Windows and Linux install"
+    "docs/FAQ.md|fix(docs): update Windows playback answer for the bundled mpv"
+    "docs/CHANGELOG.md|docs(changelog): add 7.8.6 release notes"
+    "README.md|docs(readme): describe the bundled Windows tools and fix the install steps"
 )
 
 for entry in "${commits[@]}"; do
