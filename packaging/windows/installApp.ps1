@@ -17,22 +17,19 @@ if (Test-Path $versionFile) {
     $version = (Get-Content $versionFile -Raw).Trim()
 }
 
-if (-not (Get-Command mpv.exe -ErrorAction SilentlyContinue)) {
-    if (Get-Command winget -ErrorAction SilentlyContinue) {
-        Write-Host 'mpv was not found, installing it with winget...'
-        try {
-            winget install --id shinchiro.mpv -e --accept-source-agreements --accept-package-agreements
-        } catch {
-            Write-Warning 'Automatic mpv install failed. Install mpv from https://mpv.io and add it to PATH.'
-        }
-    } else {
-        Write-Warning 'mpv was not found. Install mpv from https://mpv.io and add it to PATH.'
-    }
-}
-
 Get-Process -Name 'iNirMovies' -ErrorAction SilentlyContinue | Stop-Process -Force
 
+$srcTools = Join-Path $srcDir 'tools'
+if (-not (Test-Path (Join-Path $srcTools 'mpv\mpv.exe'))) {
+    throw 'The tools folder (bash and mpv) was not found next to the installer. Extract the whole zip first.'
+}
+
 New-Item -ItemType Directory -Force -Path $target | Out-Null
+$oldTools = Join-Path $target 'tools'
+if (Test-Path $oldTools) {
+    Remove-Item -Path $oldTools -Recurse -Force
+}
+Copy-Item -Path $srcTools -Destination $oldTools -Recurse -Force
 Copy-Item -Path $srcExe -Destination (Join-Path $target $exeName) -Force
 foreach ($name in 'uninstallApp.ps1', 'Uninstall.bat', 'LICENSE', 'VERSION') {
     $item = Join-Path $srcDir $name
