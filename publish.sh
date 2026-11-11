@@ -40,7 +40,7 @@ fi
 
 commits=(
     ".gitignore|chore(git): ignore build output and release binaries"
-    "VERSION|chore(release): bump version to 7.8.6"
+    "VERSION|chore(release): bump version to 7.8.6-1"
     "LICENSE|docs(license): scope license to GitHub Releases distribution"
     "assets/icons/appIcon.svg|feat(assets): add application icon"
     "assets/screenshots/.gitkeep|chore(assets): add screenshots directory"
@@ -48,12 +48,13 @@ commits=(
     "packaging/linux/io.inirmovies.app.desktop|feat(linux): add desktop entry"
     "packaging/linux/installApp.sh|feat(linux): add user-level install script"
     "packaging/linux/uninstallApp.sh|feat(linux): add uninstall script"
-    "packaging/windows/installApp.ps1|fix(windows): install the bundled bash and mpv tools and drop the winget step"
+    "packaging/windows/installApp.ps1|feat(windows): add a Launch switch so updates can restart the app"
     "packaging/windows/uninstallApp.ps1|feat(windows): add uninstaller with Apps and Features entry"
     "packaging/windows/Install.bat|feat(windows): add double-click install launcher"
     "packaging/windows/Uninstall.bat|feat(windows): add double-click uninstall launcher"
-    "scripts/makeRelease.sh|feat(release): ship the bundled Windows tools inside the Windows archive"
-    "publish.sh|chore(release): update commit messages for 7.8.6"
+    "scripts/makeRelease.sh|feat(release): build and upload the pacman package with every release"
+    "scripts/makePacman.sh|feat(release): add the pacman package and repository database step"
+    "publish.sh|chore(release): update commit messages for 7.8.6-1"
     ".github/workflows/releaseChecks.yml|ci: lint shell scripts, desktop entry and PowerShell scripts"
     ".github/ISSUE_TEMPLATE/bugReport.md|docs(github): add bug report template with platform and ISP fields"
     ".github/ISSUE_TEMPLATE/featureRequest.md|docs(github): add feature request template"
@@ -61,7 +62,7 @@ commits=(
     "SECURITY.md|docs(security): add security policy"
     "CONTRIBUTING.md|docs(contributing): describe repository layout and contribution rules"
     "docs/FAQ.md|fix(docs): update Windows playback answer for the bundled mpv"
-    "docs/CHANGELOG.md|docs(changelog): add 7.8.6 release notes"
+    "docs/CHANGELOG.md|docs(changelog): add 7.8.6-1 release notes"
     "README.md|docs(readme): describe the bundled Windows tools and fix the install steps"
 )
 
