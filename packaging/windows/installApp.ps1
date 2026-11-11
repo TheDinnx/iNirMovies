@@ -1,3 +1,5 @@
+param([switch]$Launch)
+
 $ErrorActionPreference = 'Stop'
 
 $srcDir = Split-Path -Parent $MyInvocation.MyCommand.Path
@@ -58,3 +60,7 @@ Set-ItemProperty -Path $uninstallKey -Name 'NoModify' -Value 1 -Type DWord
 Set-ItemProperty -Path $uninstallKey -Name 'NoRepair' -Value 1 -Type DWord
 
 Write-Host "Installed iNir Movies $version. Launch it from the Start Menu."
+
+if ($Launch) {
+    Start-Process -FilePath (Join-Path $target $exeName) -WorkingDirectory $target
+}
