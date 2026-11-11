@@ -1,5 +1,23 @@
 # Changelog
 
+## 7.8.6-1
+
+**Fixes**
+- Fixed the Linux executable failing to start with an EGL and OpenGL
+  error in 7.8.6
+- Fixed pacman only offering an old version: the pacman package and
+  repository database are now built and uploaded together with every
+  release, so `yay -Syu` always sees the newest version
+- The internet speed test now runs through curl and works on both
+  Windows and Linux, with the previous method kept as a fallback
+
+**New**
+- Update section in Settings: checks GitHub for a new release, shows a
+  notification and a badge on Settings, lists what changed, downloads
+  with progress, speed and time left, checks the download against its
+  checksum, installs it and restarts the app
+- The automatic update check can be turned off in the same section
+
 ## 7.8.6
 
 **Windows**
