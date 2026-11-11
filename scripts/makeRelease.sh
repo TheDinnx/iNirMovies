@@ -71,3 +71,7 @@ else
 fi
 
 echo "Release $tag published."
+
+if [ -x "$root/scripts/makePacman.sh" ]; then
+    "$root/scripts/makePacman.sh" || echo "The pacman package step failed." >&2
+fi
