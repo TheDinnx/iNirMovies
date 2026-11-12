@@ -53,9 +53,8 @@ sed -i "s#@PKGVER@#$pkgver#; s#@REPO@#$repo#g; s#@TAG@#$tag#; s#@SUM@#$sum#" PKG
 
 makepkg -f --noconfirm
 pkg="$(find . -maxdepth 1 -name '*.pkg.tar.zst' | head -1)"
+rm -f iNirMovies.db iNirMovies.files iNirMovies.db.tar.gz iNirMovies.files.tar.gz
 repo-add iNirMovies.db.tar.gz "$pkg"
-cp -L iNirMovies.db.tar.gz iNirMovies.db
-cp -L iNirMovies.files.tar.gz iNirMovies.files
 
-gh release upload "$tag" "$pkg" iNirMovies.db iNirMovies.files -R "$repo" --clobber
+gh release upload "$tag" "$pkg" iNirMovies.db.tar.gz iNirMovies.files.tar.gz -R "$repo" --clobber
 echo "Pacman package $pkgver-1 published."
