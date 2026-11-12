@@ -1,5 +1,16 @@
 # Changelog
 
+## 7.8.6-3
+- Added the Cyber Core theme: sharp corners app-wide, a neon border and a
+  new Cyber Grid effect (scanline + falling glyph columns)
+- Snow is calmer and softer: fewer, blurred flakes and far fewer glint
+  sparkles instead of the sharp, flat, "electronic" look
+- The network report said "MovieWidget" instead of "iNirMovies"
+- Copy report and Copy IP now show a "Copied" confirmation, and fall
+  back to xclip/xsel when wl-copy is not available
+- Fixed the pacman package step failing with a "same file" error on
+  the database symlink
+
 ## 7.8.6-2
 
 **Fixes**
