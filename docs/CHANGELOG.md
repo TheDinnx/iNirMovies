@@ -1,5 +1,21 @@
 # Changelog
 
+## 7.8.6-2
+
+**Fixes**
+- Fixed the player and the tutorial sounds not starting on Linux:
+  programs launched by the app, such as mpv and curl, were loading the
+  app's bundled libraries instead of the system ones
+- Saved settings were overriding the new defaults, so the theme, effect,
+  window size and player profile are reset once to Snowfall, Snow,
+  Default and Performance
+- The About page now says GitHub repository instead of Developer
+
+**Release checks**
+- The build now runs the Windows app on a real Windows machine and the
+  Linux app on the publishing machine before anything is published, and
+  stops if either one fails
+
 ## 7.8.6-1
 
 **Fixes**
