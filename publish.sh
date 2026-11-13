@@ -40,7 +40,7 @@ fi
 
 commits=(
     ".gitignore|chore(git): ignore build output and release binaries"
-    "VERSION|chore(release): bump version to 7.8.6-2"
+    "VERSION|chore(release): bump version to 7.8.6-5"
     "LICENSE|docs(license): scope license to GitHub Releases distribution"
     "assets/icons/appIcon.svg|feat(assets): add application icon"
     "assets/screenshots/.gitkeep|chore(assets): add screenshots directory"
@@ -54,7 +54,7 @@ commits=(
     "packaging/windows/Uninstall.bat|feat(windows): add double-click uninstall launcher"
     "scripts/makeRelease.sh|feat(release): build and upload the pacman package with every release"
     "scripts/makePacman.sh|feat(release): add the pacman package and repository database step"
-    "publish.sh|chore(release): update commit messages for 7.8.6-2"
+    "publish.sh|chore(release): update commit messages for 7.8.6-5"
     ".github/workflows/releaseChecks.yml|ci: lint shell scripts, desktop entry and PowerShell scripts"
     ".github/ISSUE_TEMPLATE/bugReport.md|docs(github): add bug report template with platform and ISP fields"
     ".github/ISSUE_TEMPLATE/featureRequest.md|docs(github): add feature request template"
@@ -62,7 +62,7 @@ commits=(
     "SECURITY.md|docs(security): add security policy"
     "CONTRIBUTING.md|docs(contributing): describe repository layout and contribution rules"
     "docs/FAQ.md|fix(docs): update Windows playback answer for the bundled mpv"
-    "docs/CHANGELOG.md|docs(changelog): add 7.8.6-2 release notes"
+    "docs/CHANGELOG.md|docs(changelog): add 7.8.6-5 release notes"
     "README.md|docs(readme): describe the bundled Windows tools and fix the install steps"
 )
 
