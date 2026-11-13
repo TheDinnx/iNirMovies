@@ -1,6 +1,26 @@
 # Changelog
 
-## 7.8.6-4
+## 7.8.6-5
+- release.sh now refuses to publish if VERSION and the appVersion baked
+  into MovieWidget.qml do not match, force-syncs the public repo's
+  VERSION files right before publishing, and checks afterward that the
+  release really was tagged correctly. This is what caused the tag and
+  the running app to show different version numbers
+- On Windows: fixed mpv not being found when it is nested inside the
+  bundled tools folder, added a Windows app identity (AppUserModelID)
+  and per-monitor DPI awareness, which likely explains the window
+  showing no icon and the settings screen ignoring mouse clicks while
+  touch still worked
+- The icon is now loaded from the bundled .ico on Windows instead of
+  the .svg, which needs a plugin that is not always bundled
+- "Last checked" showed the time in Arabic (ر/م) even with English
+  selected; it now always follows the app's own language
+- The settings panel absorbs clicks inside it instead of letting a
+  stray click fall through and close it
+- Snow now uses actual six-point snowflake shapes for most flakes
+  instead of plain soft circles
+
+## 7.8.6-5
 - Fixed the update check thinking a pacman-installed copy was not
   package-managed, which could send it into a loop of downloading and
   installing an update that never replaced the running copy. It is now
@@ -10,7 +30,7 @@
   scripts/bumpVersion.sh, never by hand, or the published tag and the
   version baked into the binary can drift apart
 
-## 7.8.6-3
+## 7.8.6-5
 - Added the Cyber Core theme: sharp corners app-wide, a neon border and a
   new Cyber Grid effect (scanline + falling glyph columns)
 - Snow is calmer and softer: fewer, blurred flakes and far fewer glint
@@ -21,7 +41,7 @@
 - Fixed the pacman package step failing with a "same file" error on
   the database symlink
 
-## 7.8.6-2
+## 7.8.6-5
 
 **Fixes**
 - Fixed the player and the tutorial sounds not starting on Linux:
@@ -37,7 +57,7 @@
   Linux app on the publishing machine before anything is published, and
   stops if either one fails
 
-## 7.8.6-1
+## 7.8.6-5
 
 **Fixes**
 - Fixed the Linux executable failing to start with an EGL and OpenGL
