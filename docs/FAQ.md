@@ -34,3 +34,14 @@ The app closes itself when the player opens, so the logs are saved to
 files. Windows: `%LOCALAPPDATA%\dinnx\movies\debug.log`. Linux:
 `~/.cache/dinnx/movies/debug.log`. The player's own output is in
 `mpv.stderr` and `mpv.stdout` in the same folder.
+
+**Where are the logs?**
+The app closes itself when the player opens, so the logs are saved to
+files. Windows: `%LOCALAPPDATA%\dinnx\movies\debug.log`. Linux:
+`~/.cache/dinnx/movies/debug.log`. The player's own output is in
+`mpv.stderr` and `mpv.stdout` in the same folder.
+
+**mpv not found on Windows?**
+Run `FixMpv.bat` next to `iNirMovies.exe`. It looks for `mpv.exe` under
+the `tools` folder, moves it back into place if it ended up nested one
+folder too deep, and tests that it runs.

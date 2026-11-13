@@ -1,5 +1,20 @@
 # Changelog
 
+## 8.0.0
+- New: `scripts/setupPublicRepo.sh` sets up the public releases repo in
+  one command, so `release.sh` has somewhere to publish to
+- Fixed release.sh always writing "set version to 7.8.6-2" in its own
+  commit messages no matter the real version being released
+- Windows: rounded window corners, and a `FixMpv.bat` next to the app
+  that finds and repairs a nested or missing mpv on its own
+- README and FAQ now explain how to get off an old version by hand if
+  the in-app updater is stuck, for both pacman and Windows installs
+- Card size now defaults to Compact for new installs
+- Cyber Core theme: corners are rounded again instead of sharp
+  squares, and it has a soft two-tone glow backdrop behind the grid
+- The Update tab now shows a dot after installing an update too, not
+  only while one is available, until you open it and see what changed
+
 ## 7.8.6-5
 - release.sh now refuses to publish if VERSION and the appVersion baked
   into MovieWidget.qml do not match, force-syncs the public repo's
@@ -20,7 +35,7 @@
 - Snow now uses actual six-point snowflake shapes for most flakes
   instead of plain soft circles
 
-## 7.8.6-5
+## 7.8.6-4
 - Fixed the update check thinking a pacman-installed copy was not
   package-managed, which could send it into a loop of downloading and
   installing an update that never replaced the running copy. It is now
@@ -30,7 +45,7 @@
   scripts/bumpVersion.sh, never by hand, or the published tag and the
   version baked into the binary can drift apart
 
-## 7.8.6-5
+## 7.8.6-3
 - Added the Cyber Core theme: sharp corners app-wide, a neon border and a
   new Cyber Grid effect (scanline + falling glyph columns)
 - Snow is calmer and softer: fewer, blurred flakes and far fewer glint
@@ -41,7 +56,7 @@
 - Fixed the pacman package step failing with a "same file" error on
   the database symlink
 
-## 7.8.6-5
+## 7.8.6-2
 
 **Fixes**
 - Fixed the player and the tutorial sounds not starting on Linux:
@@ -57,7 +72,7 @@
   Linux app on the publishing machine before anything is published, and
   stops if either one fails
 
-## 7.8.6-5
+## 7.8.6-1
 
 **Fixes**
 - Fixed the Linux executable failing to start with an EGL and OpenGL

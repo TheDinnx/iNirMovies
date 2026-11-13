@@ -165,3 +165,13 @@ welcome here.
 ## License
 
 See [LICENSE](LICENSE).
+
+**Stuck on an old version and the in-app update does nothing?**
+Linux (pacman/yay): `sudo pacman -Syu inir-movies`. If that package is
+not found, re-add the repo from the FAQ below, then update again.
+Windows: download the latest zip from
+[Releases](https://github.com/TheDinnx/iNirMovies/releases/latest),
+extract the whole thing over your old install folder, and run
+`Install.bat` again. If the player does not start afterwards, run
+`FixMpv.bat` from that same folder: it finds and repairs the bundled
+mpv on its own, no typing required.
