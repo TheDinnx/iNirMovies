@@ -1,5 +1,15 @@
 # Changelog
 
+## 7.8.6-4
+- Fixed the update check thinking a pacman-installed copy was not
+  package-managed, which could send it into a loop of downloading and
+  installing an update that never replaced the running copy. It is now
+  confirmed by asking pacman directly, not only by the executable's path
+- A reminder: VERSION, packaging/updates/VERSION and appVersion inside
+  MovieWidget.qml must always be changed together with
+  scripts/bumpVersion.sh, never by hand, or the published tag and the
+  version baked into the binary can drift apart
+
 ## 7.8.6-3
 - Added the Cyber Core theme: sharp corners app-wide, a neon border and a
   new Cyber Grid effect (scanline + falling glyph columns)
