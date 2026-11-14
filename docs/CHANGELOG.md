@@ -1,5 +1,22 @@
 # Changelog
 
+## 8.0.1
+- The real cause of the endless "update available" loop since 7.8.6-2:
+  release.sh had a leftover step that copied an old prebuilt binary
+  over the freshly built one before packaging, every single release.
+  Every fix shipped in 7.8.6-3 through 8.0.0 was built correctly but
+  never actually reached anyone, because this silently replaced it
+  with stale binary each time. This step is removed, and release.sh
+  now runs the built executable and refuses to publish unless it
+  reports the exact version being released
+- Theme, effect and card size could silently reset back to Snowfall /
+  Snow / Default while your real saved settings were still loading
+  (more likely on a slow disk or a busy first load), because a
+  startup safety timer treated "not finished loading yet" the same
+  as "no settings file". It no longer resets anything itself
+- New installs now default to the Cyber Core theme, its Cyber Grid
+  effect, and Compact cards
+
 ## 8.0.0
 - New: `scripts/setupPublicRepo.sh` sets up the public releases repo in
   one command, so `release.sh` has somewhere to publish to
