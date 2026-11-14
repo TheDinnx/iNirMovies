@@ -175,3 +175,18 @@ extract the whole thing over your old install folder, and run
 `Install.bat` again. If the player does not start afterwards, run
 `FixMpv.bat` from that same folder: it finds and repairs the bundled
 mpv on its own, no typing required.
+
+**Stuck on an old version and the in-app update does nothing?**
+Releases before 8.0.1 shipped a binary that did not match its own
+version number, so updating just reinstalled the same broken version
+under a new name. This is fixed from 8.0.1 onward: Linux (pacman/yay)
+`sudo pacman -Syu inir-movies`, Windows: download the latest zip from
+[Releases](https://github.com/TheDinnx/iNirMovies/releases/latest),
+extract the whole thing over your old install folder, and run
+`Install.bat` again. Either way, check Settings > Update afterwards
+and confirm it shows 8.0.1 or newer, not just that it ran. If it is
+still stuck on an old version after that, the package itself has not
+been updated yet, not your install, please open an issue. If the
+player does not start on Windows afterwards, run `FixMpv.bat` from
+that same folder: it finds and repairs the bundled mpv on its own, no
+typing required.

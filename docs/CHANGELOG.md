@@ -1,5 +1,18 @@
 # Changelog
 
+## 8.0.2
+- The window's own background now always matches the selected theme,
+  instead of a fixed dark navy. This was most visible on Cyber Core:
+  during loading or a layout change, the mismatched color could show
+  through and look like the theme had reset or gone black
+- Button and UI sounds sometimes did not play because rapid clicks
+  were being collapsed into a single sound. Every click plays its
+  sound now
+- "Copy IP" shows a "Copied" confirmation, same as "Copy report"
+- README: clarified that the pacman/zip update instructions only
+  start working from 8.0.1 onward, since earlier releases shipped a
+  package that did not match its own version number
+
 ## 8.0.1
 - The real cause of the endless "update available" loop since 7.8.6-2:
   release.sh had a leftover step that copied an old prebuilt binary
