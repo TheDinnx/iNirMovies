@@ -1,5 +1,23 @@
 # Changelog
 
+## 8.0.4
+- Found the real reason "Fix mpv" and the standalone `FixMpv.bat` were
+  never there after extracting the Windows zip: the script that
+  assembles that zip had a fixed file list and FixMpv.bat was never
+  added to it, so it was silently left out of every release. It is
+  now included, and the packaging script refuses to publish if any
+  expected Windows or Linux file is missing, instead of staying quiet
+  about it
+- The in-app "Fix mpv" button now gets the real install folder
+  directly from the app itself instead of guessing it, so it can
+  actually find and repair mpv
+- Windows: trying OpenGL instead of Direct3D for rendering, as a
+  targeted test for the settings screen ignoring the mouse while touch
+  still works. Not confirmed yet, please test and report back either
+  way
+- Removed the pulsing white glow at the bottom of the snow effect
+- Documented minimum system requirements in the README
+
 ## 8.0.3
 - Pacman-managed installs now get an "Update now" button in-app
   instead of a yay command to type: it asks for your password through

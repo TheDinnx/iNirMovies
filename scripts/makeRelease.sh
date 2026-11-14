@@ -48,9 +48,17 @@ install -m 644 packaging/windows/installApp.ps1 "$windowsStage/installApp.ps1"
 install -m 644 packaging/windows/uninstallApp.ps1 "$windowsStage/uninstallApp.ps1"
 install -m 644 packaging/windows/Install.bat "$windowsStage/Install.bat"
 install -m 644 packaging/windows/Uninstall.bat "$windowsStage/Uninstall.bat"
+install -m 644 packaging/windows/FixMpv.bat "$windowsStage/FixMpv.bat"
 cp -r "$windowsTools" "$windowsStage/tools"
 install -m 644 LICENSE "$windowsStage/LICENSE"
 install -m 644 VERSION "$windowsStage/VERSION"
+
+for f in iNirMovies.exe installApp.ps1 uninstallApp.ps1 Install.bat Uninstall.bat FixMpv.bat tools/mpv/mpv.exe tools/git/usr/bin/bash.exe LICENSE VERSION; do
+    if [ ! -e "$windowsStage/$f" ]; then
+        echo "Windows package is missing $f, nothing was published." >&2
+        exit 1
+    fi
+done
 
 tar --owner=0 --group=0 -C "$build/stage/linux" -czf "$build/iNirMovies-linux.tar.gz" iNirMovies
 (cd "$build/stage/windows" && zip -qr "$build/iNirMovies-windows.zip" iNirMovies)
