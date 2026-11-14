@@ -1,5 +1,20 @@
 # Changelog
 
+## 8.0.3
+- Pacman-managed installs now get an "Update now" button in-app
+  instead of a yay command to type: it asks for your password through
+  a graphical prompt (or opens a terminal if none is available) and
+  runs pacman itself
+- Windows: added a "Fix mpv" button under Settings > Update that finds
+  and repairs a missing or misplaced mpv on its own
+- "Copy report" and "Copy IP" showed nothing after copying because the
+  "Copied" confirmation was placed outside the button's own clipped
+  area and was never visible. The button's own label now changes to
+  "Copied" instead
+- Cyber Core's background was so close to pure black that empty and
+  loading screens looked unthemed; it now keeps a visible dark navy
+  tint instead
+
 ## 8.0.2
 - The window's own background now always matches the selected theme,
   instead of a fixed dark navy. This was most visible on Cyber Core:
