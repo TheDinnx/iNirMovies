@@ -1,5 +1,25 @@
 # Changelog
 
+## 8.0.5
+- Found and translated text that stayed in English even with Arabic
+  selected: the Movies/TV Shows/Channels/Settings tabs, Search,
+  Recent Searches, Watch History, Favorites, Back, Where to watch,
+  Browse Alternative Sites, Try Next, Not working?, BEST,
+  Get a Free API Key, Try Again, STREAM, RENT, BUY, LIVE, Fetching
+  episodes..., Checking availability..., and the "all sources failed"
+  message. The four main tabs also now use the Arabic font when
+  Arabic is selected, instead of always using the English one
+- Found the real cause of the loading/empty screens looking plain
+  dark instead of showing the theme: three separate loading and
+  empty-state panels (movies/TV loading, the channels empty state,
+  and the channels loading skeleton) each had a nearly fully opaque
+  flat color on top of the themed background, hiding it completely.
+  All three are much more transparent now, so the theme's own
+  background and effects show through
+- The mpv "not found" log line now also records the full PATH it
+  searched, to tell apart a packaging problem from mpv simply not
+  being installed on that machine
+
 ## 8.0.4
 - Found the real reason "Fix mpv" and the standalone `FixMpv.bat` were
   never there after extracting the Windows zip: the script that
@@ -15,7 +35,12 @@
   targeted test for the settings screen ignoring the mouse while touch
   still works. Not confirmed yet, please test and report back either
   way
-- Removed the pulsing white glow at the bottom of the snow effect
+- Removed the pulsing white glow at the bottom of the snow effect, and
+  the drifting white fog shapes that were also sitting near the
+  bottom, not just the one gradient found earlier
+- Default subtitle language is now English instead of Arabic
+- Removed the soft glow band at the top of the snow effect too, so
+  nothing but the falling flakes themselves remains
 - Documented minimum system requirements in the README
 
 ## 8.0.3
