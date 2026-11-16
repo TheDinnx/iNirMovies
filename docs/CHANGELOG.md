@@ -1,5 +1,41 @@
 # Changelog
 
+## 8.0.7
+- Fixed the loading screen layout. The grey placeholder cards used to
+  be drawn over the whole page, on top of Recent Searches, Watch
+  History and Favorites. They now start right under the Popular title,
+  the Loading pill sits on the same line as that title, and the
+  placeholders are skipped completely when the page already has cached
+  posters to show while it refreshes
+- "Popular Movies" and "Popular TV Shows" are now translated in Arabic
+  (الأفلام الشائعة / المسلسلات الشائعة), the home section titles use the
+  Arabic font when Arabic is selected, and the RapidAPI hint text no
+  longer shows a raw variable name
+- Redesigned the empty Channels page: a centered card with a TV badge,
+  a short explanation of what file to pick, and the same button
+- Windows: touchpad support. Two-finger scrolling now works up, down,
+  left and right with a faster, lighter response than the mouse wheel,
+  and the same smooth scrolling is shared by the mouse wheel. Inside
+  the player the mouse wheel changes the volume and a sideways
+  two-finger swipe seeks 5 seconds, tap pauses and double tap toggles
+  fullscreen
+- mpv configuration: the player scripts, the key bindings and the
+  skip-intro, progress and stats scripts are now written when the app
+  starts and the launch waits for them to exist before mpv starts, so
+  the very first video on a slow Windows start can no longer open
+  without them. mpv also writes its own mpv.log for every launch, and
+  every playback logs the settings mpv really applied (video output,
+  GPU context, hardware decoding, script options, key bindings and the
+  mpv version) as [mpv-config] in debug.log
+- New diagnostics.log next to wrapper.log: a start-up report with the
+  Windows version, Qt version, screens and scaling, every mouse and
+  touchpad Qt can see, the tools found, the PATH, the result of the mpv
+  lookup, and the first mouse wheel and touchpad events with what each
+  one scrolled. It rotates by itself at 1 MB
+- Linux build: the missing xcb libraries that PyInstaller warned about
+  are now installed before building, and the build prints a clear
+  warning if a library goes missing again
+
 ## 8.0.6
 - Windows: found the real reason the player never started even though
   mpv.exe was installed and "Fix mpv" reported everything fine. The
