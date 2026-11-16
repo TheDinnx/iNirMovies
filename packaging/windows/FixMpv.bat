@@ -38,6 +38,18 @@ if errorlevel 1 (
     exit /b 1
 )
 
+if not exist "%appDir%tools\bin" mkdir "%appDir%tools\bin"
+powershell -NoProfile -Command "$t = '#!/bin/sh' + [char]10 + 'exec \"$(dirname \"$0\")/../mpv/mpv.exe\" \"$@\"' + [char]10; [IO.File]::WriteAllText('%appDir%tools\bin\mpv', $t)"
+
+echo Testing mpv through the app's shell...
+set "PATH=%appDir%tools\bin;%appDir%tools\git\usr\bin;%PATH%"
+"%appDir%tools\git\usr\bin\bash.exe" -c "command -v mpv >/dev/null 2>&1 && mpv --version >/dev/null 2>&1"
+if errorlevel 1 (
+    echo mpv exists but the app's shell could not start it.
+    pause
+    exit /b 1
+)
+
 echo.
 echo mpv is working. You can close this window and open iNir Movies again.
 pause

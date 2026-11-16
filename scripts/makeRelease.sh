@@ -53,7 +53,7 @@ cp -r "$windowsTools" "$windowsStage/tools"
 install -m 644 LICENSE "$windowsStage/LICENSE"
 install -m 644 VERSION "$windowsStage/VERSION"
 
-for f in iNirMovies.exe installApp.ps1 uninstallApp.ps1 Install.bat Uninstall.bat FixMpv.bat tools/mpv/mpv.exe tools/git/usr/bin/bash.exe LICENSE VERSION; do
+for f in iNirMovies.exe installApp.ps1 uninstallApp.ps1 Install.bat Uninstall.bat FixMpv.bat tools/mpv/mpv.exe tools/bin/mpv tools/git/usr/bin/bash.exe LICENSE VERSION; do
     if [ ! -e "$windowsStage/$f" ]; then
         echo "Windows package is missing $f, nothing was published." >&2
         exit 1

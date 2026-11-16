@@ -1,5 +1,40 @@
 # Changelog
 
+## 8.0.6
+- Windows: found the real reason the player never started even though
+  mpv.exe was installed and "Fix mpv" reported everything fine. The
+  mpv package ships a folder named "mpv" right next to mpv.exe. Inside
+  the bundled shell, the command "mpv" finds that folder first and
+  never tries mpv.exe, so every launch ended with "mpv binary not
+  found" while running mpv.exe directly worked, which is why Fix mpv
+  could not see the problem. The app now creates a small "mpv" launcher
+  in tools\bin that points at the exact mpv.exe and puts it first on
+  the PATH, and the launch scripts also fall back to mpv.exe by name
+- Windows: at startup the app now checks that the bundled shell can
+  find and start mpv by name, and writes the result to wrapper.log as
+  [mpv-lookup] ok or ERROR. The Windows build on GitHub runs the same
+  check and stops before publishing if it fails, so a broken player can
+  no longer be released without anyone noticing
+- "Fix mpv" in Settings > Update and FixMpv.bat now rebuild that
+  launcher and test starting mpv through the app's own shell, not just
+  running mpv.exe on its own
+- Windows: the mouse wheel did not scroll anything (the middle button
+  drag and touch worked). Wheel scrolling is now handled by the app
+  itself on Windows: it finds the list or page under the cursor,
+  scrolls it smoothly, stops at the ends, passes the scroll on to the
+  page behind when a list reaches its end, and leaves the pop-up
+  windows, the season switcher and the tab bar alone so they keep
+  behaving as before. Shift + wheel scrolls sideways. The first few
+  wheel events are logged in wrapper.log to make any remaining problem
+  easy to track down. Linux is unchanged
+- The loading screen for movies and shows, the channels loading screen
+  and the "No channels file selected" screen no longer paint any dark
+  layer at all, so the theme background and its effects show through
+  everywhere instead of a flat dark panel
+- The GitHub build pipeline moved to the current versions of its
+  checkout, Python setup and artifact upload steps, which silences the
+  Node.js 20 deprecation warning on every build
+
 ## 8.0.5
 - Found and translated text that stayed in English even with Arabic
   selected: the Movies/TV Shows/Channels/Settings tabs, Search,
