@@ -26,7 +26,7 @@ for bin in "$linuxBin" "$windowsBin"; do
 done
 
 if [ ! -f "$windowsTools/git/usr/bin/bash.exe" ] || [ ! -f "$windowsTools/mpv/mpv.exe" ]; then
-    echo "Missing dist/tools (bundled bash and mpv for Windows). Build it with the iNirMovies-build workflow first." >&2
+    echo "Missing dist/tools (bundled bash and mpv for Windows). Run ./release.sh in the iNirMovies-build folder first." >&2
     exit 1
 fi
 
