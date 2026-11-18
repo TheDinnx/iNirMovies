@@ -35,6 +35,7 @@ Cinemana and Cinemana X are the same library with the same categories, languages
 - Browse Cinemana movies, TV shows and live channels from one screen
 - Live channels from any channels file: M3U, M3U8, JSON, PLS, XSPF or a plain list, with categories, logos and merged servers
 - Live channels from any channels file: M3U, M3U8, JSON, PLS, XSPF or a plain list, with categories, logos and merged servers
+- Live channels from any channels file: M3U, M3U8, JSON, PLS, XSPF or a plain list, with categories, logos and merged servers
 - Built-in guide that walks first-time users through the app
 - Smart, Default or custom window sizing, remembered between launches
 - Skip-intro button during playback, with a shortcut to dismiss it
