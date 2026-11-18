@@ -9,28 +9,31 @@
 [![Latest release](assets/badges/release.svg)](https://github.com/TheDinnx/iNirMovies/releases/latest)
 [![Download](assets/badges/download.svg)](https://github.com/TheDinnx/iNirMovies/releases/latest)
 [![Platform](assets/badges/platform.svg)](#requirements)
-[![Network](assets/badges/network.svg)](#important-earthlink-only)
+[![Network](assets/badges/network.svg)](#important-which-source-works-on-your-internet)
 [![License](assets/badges/license.svg)](LICENSE)
 
 </div>
 
 ---
 
-## Important: Earthlink only
+<a id="important-earthlink-only"></a>
 
-iNir Movies is a desktop client for **Cinemana**, the streaming service
-available through **Earthlink**, the internet service provider in Iraq.
+## Important: Which source works on your internet
 
-Cinemana is only reachable from the Earthlink network. This means
-iNir Movies **works only while your device is connected to an
-Earthlink internet connection**. On any other provider (other home
-ISPs, mobile data, public Wi-Fi) the catalogue will not load and
-nothing will play. This is a limitation of Cinemana itself and not a
-bug in the app, so please do not report it as one.
+iNir Movies is a desktop client for **Cinemana**, the streaming library available in Iraq. The library can be reached from two addresses, and which one answers depends on your internet connection:
+
+| Source in the app | Works on |
+| ----------------- | -------- |
+| **Cinemana** | **Earthlink only** |
+| **Cinemana X** | **Any Iraqi IP address**, Earthlink or any other Iraqi provider |
+| **Cinemeta** | Any internet connection, anywhere |
+
+Cinemana and Cinemana X are the same library with the same categories, languages and qualities. Pick the source from the menu next to the search box. If one does not load on your connection, switch to another. Outside Iraq, or on an IP that is not Iraqi, Cinemana and Cinemana X will not load. This is a limit of the service itself and not a bug in the app, so please do not report it as one.
 
 ## Features
 
 - Browse Cinemana movies, TV shows and live channels from one screen
+- Live channels from any channels file: M3U, M3U8, JSON, PLS, XSPF or a plain list, with categories, logos and merged servers
 - Built-in guide that walks first-time users through the app
 - Smart, Default or custom window sizing, remembered between launches
 - Skip-intro button during playback, with a shortcut to dismiss it
@@ -118,7 +121,7 @@ Windows: open **Settings > Apps > Installed apps**, select
 
 | Requirement | Why |
 |---|---|
-| Earthlink internet connection | Cinemana is only reachable on Earthlink |
+| Iraqi internet connection | Cinemana needs Earthlink, Cinemana X works on any Iraqi IP, Cinemeta works anywhere |
 | Linux or Windows, x86_64 | the release binaries target these platforms |
 | [mpv](https://mpv.io) (Linux only) | plays movies, shows and channels, bundled on Windows |
 | xcb-util-cursor (Linux only) | required by the Qt/XCB platform plugin |
@@ -248,3 +251,11 @@ start with `#` are ignored and your options are applied after the
 built-in ones. The file `mpv.log` in the same folder shows what mpv
 reported, and `debug.log` has an `[mpv-config]` line with the settings
 that were really applied.
+
+**Channels files**
+The Channels tab opens any channels file. The format is detected from the
+content: M3U, M3U8 and M3U_PLUS (group-title, tvg-logo, tvg-id,
+`#EXTGRP`, `#EXTVLCOPT` user agent and referer), JSON in several layouts,
+PLS, XSPF, and plain text lists with a name and a link per line. Entries
+with the same name and category are merged into one channel with several
+servers.

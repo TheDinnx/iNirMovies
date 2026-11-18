@@ -59,6 +59,14 @@
   complaining about, and prints a clear warning when a library goes
   missing again. The GitHub actions moved to current versions
 
+- Channels now accept any channels file, not only JSON: M3U, M3U8,
+  M3U_PLUS, JSON in several layouts, PLS, XSPF and plain text lists
+  (name and link per line). The format is detected from the content,
+  categories come from group-title or #EXTGRP, logos from tvg-logo,
+  and user agent, referer and clear key options from the file are kept.
+  Entries with the same name and category are merged into one channel
+  with several servers
+
 ## 8.0.7
 - Fixed the loading screen layout. The grey placeholder cards used to
   be drawn over the whole page, on top of Recent Searches, Watch

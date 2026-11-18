@@ -63,3 +63,9 @@ folder too deep, and tests that it runs.
 Cinemana X works on Iraqi IP addresses, not only Earthlink. Cinemana
 works on Earthlink only. They are the same library, so if one does not
 load, switch to the other from the source menu.
+
+**Which files can I load in Channels?**
+Any of M3U, M3U8, M3U_PLUS, JSON, PLS, XSPF or a plain text list with a
+name and a link on each line. The format is detected from the content, so
+the file extension does not matter. Channels with the same name and
+category become one channel with several servers.

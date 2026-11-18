@@ -31,7 +31,7 @@ cat > PKGBUILD <<'PKG'
 pkgname=inir-movies
 pkgver=@PKGVER@
 pkgrel=1
-pkgdesc="Watch Cinemana movies, TV shows and live channels in one fast, simple app (Earthlink only)"
+pkgdesc="Watch Cinemana movies, TV shows and live channels in one fast, simple app (Cinemana on Earthlink, Cinemana X on any Iraqi IP)"
 arch=("x86_64")
 url="https://github.com/@REPO@"
 license=("custom")

@@ -29,7 +29,7 @@ git config user.name >/dev/null 2>&1 || git config user.name "$login"
 git config user.email >/dev/null 2>&1 || git config user.email "$userId+$login@users.noreply.github.com"
 
 if ! gh repo view "$repo" >/dev/null 2>&1; then
-    gh repo create "$repo" --public --description "iNir Movies - Cinemana client for Earthlink users on Windows and Linux"
+    gh repo create "$repo" --public --description "iNir Movies - Cinemana client for Iraq: Cinemana on Earthlink, Cinemana X on any Iraqi IP, for Windows and Linux"
 fi
 
 if git remote get-url origin >/dev/null 2>&1; then
