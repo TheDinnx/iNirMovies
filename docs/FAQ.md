@@ -58,3 +58,8 @@ with the mouse and touchpad events.
 Run `FixMpv.bat` next to `iNirMovies.exe`. It looks for `mpv.exe` under
 the `tools` folder, moves it back into place if it ended up nested one
 folder too deep, and tests that it runs.
+
+**Which source works on my internet?**
+Cinemana X works on Iraqi IP addresses, not only Earthlink. Cinemana
+works on Earthlink only. They are the same library, so if one does not
+load, switch to the other from the source menu.

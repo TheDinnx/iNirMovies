@@ -216,3 +216,35 @@ from inside the app.
 - Windows: extract the full zip, do not copy just `iNirMovies.exe`
   out on its own, the `tools` folder next to it is required
 - Linux: no extra packages needed, everything required is bundled
+
+**Sources: Cinemeta, Cinemana and Cinemana X**
+The menu next to the search box picks the catalog. Cinemeta is the default
+movie database and works on any internet connection. Cinemana and
+Cinemana X are the same library with the same categories, languages,
+qualities and request paths, only the address is different. Cinemana X
+works on any Iraqi IP address, not only Earthlink, while Cinemana
+(cinemana.shabakaty.com) works on Earthlink only. Pick whichever one
+answers on your connection. The addresses of both sites are never
+written to the logs and never shown in the player, they appear as
+`Cinemana` and `Cinemana X`.
+
+**Player keys**
+`S` or `Enter` skips the intro or outro, `D` hides the skip button until
+the next skip moment, `I` shows the file info (source name, resolution,
+codec, decoder, cache, dropped frames) without any link, `F` toggles
+fullscreen and `M` mutes. The mouse wheel changes the volume and a
+sideways two-finger swipe on a touchpad seeks 5 seconds.
+
+**Skip button text**
+The skip button is English by default. Settings > Player lets you pick
+Arabic, or type your own text for the intro, outro, recap and generic
+skip buttons.
+
+**Your own mpv options**
+Create `mpv-user.conf` in the cache folder (Windows:
+`%LOCALAPPDATA%\dinnx\movies`, Linux: `~/.cache/dinnx/movies`) and put one
+mpv option per line, for example `volume=60` or `hwdec=no`. Lines that
+start with `#` are ignored and your options are applied after the
+built-in ones. The file `mpv.log` in the same folder shows what mpv
+reported, and `debug.log` has an `[mpv-config]` line with the settings
+that were really applied.

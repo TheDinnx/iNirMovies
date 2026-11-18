@@ -1,5 +1,64 @@
 # Changelog
 
+## 8.1.2
+- New source menu instead of the Cinemana switch: Cinemeta, Cinemana
+  and Cinemana X. Cinemana X is the same library on a different
+  address, with exactly the same paths, categories, languages and
+  qualities. Cinemana X works on any Iraqi IP address, Cinemana works
+  on Earthlink only, so choose the one that answers on your internet.
+  The choice is saved and switching reloads the catalog, the genres and
+  the languages from the chosen address
+- The addresses of Cinemana and Cinemana X are now hidden everywhere
+  they could leak: debug.log, wrapper.log, diagnostics.log, mpv.stdout,
+  mpv.stderr and mpv.log show only the names "Cinemana" and
+  "Cinemana X". The file info in the player (I key) shows the source
+  name, resolution, codec, decoder, audio, cache and dropped frames
+  and never the playback link
+- Rewrote how languages and genres are built. They now come straight
+  from the categories response by their numbers (langNb) instead of
+  being guessed from names or crawled page by page: every genre gets
+  its language list instantly, ordered by how many titles it has, with
+  the Arabic and English names the service sends. The old built-in
+  language table had wrong numbers (it said 1 is English and 2 is
+  Arabic, the real ones are 7 and 9) and is replaced by the full real
+  table. Genres are ordered as the service orders them, names that arrive
+  HTML-encoded, like "War & Politics", are decoded before matching, and Arabic genre
+  names come from the service itself
+- Fixed the page jumping down to Popular Movies / Popular TV Shows.
+  When Search history, Watch history or Favorites finished loading the
+  top part grew taller and the view stayed at the old position, so you
+  landed in the middle of it. The page now stays at the top when you
+  have not scrolled, keeps your place when you have, and switching
+  between Movies, TV Shows and Channels always starts from the top
+- Better loading screen: placeholders fade in and out instead of
+  popping, the posters fade in when they arrive, and placeholders are
+  not shown at all when cached posters are already on the page
+- Translated the genres, the sort choices (newest, oldest, best,
+  worst, A-Z, Z-A, most viewed and the rest) and the language names
+  when Arabic is selected
+- No more emoji icons: the empty Channels page, the missing poster
+  placeholders and the API key notice now use drawn icons that follow
+  the theme colors
+- The skip button is English by default. Settings now lets you choose
+  Arabic or type your own text for the intro, outro, recap and generic
+  skip buttons. Press D in the player to hide the skip button until the
+  next skip moment, S or Enter to skip
+- mpv on Windows, full configuration support: hardware decoding uses
+  the safe automatic mode, the cache size follows the memory of the
+  computer instead of always asking for 8 GB, the player scripts are
+  written at startup and waited for before every launch, and the player
+  keys (wheel volume, sideways swipe seeks, F fullscreen, M mute) are
+  part of the configuration
+- Your own mpv options: put them one per line in mpv-user.conf in the
+  cache folder and they are applied after the built-in ones on Windows
+  and Linux. mpv.log and the [mpv-config] line in debug.log show what
+  was really applied
+- Touchpad scrolling on Windows is faster and lighter than the mouse
+  wheel, and diagnostics.log records every mouse and touchpad Qt sees
+- The Linux build installs the xcb libraries PyInstaller was
+  complaining about, and prints a clear warning when a library goes
+  missing again. The GitHub actions moved to current versions
+
 ## 8.0.7
 - Fixed the loading screen layout. The grey placeholder cards used to
   be drawn over the whole page, on top of Recent Searches, Watch
