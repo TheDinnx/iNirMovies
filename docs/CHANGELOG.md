@@ -1,6 +1,6 @@
 # Changelog
 
-## 8.1.3
+## 8.1.4
 - Fixed the settings text boxes staying selected: the custom skip
   button boxes kept their highlighted border after the mouse left and
   stayed that way when it came back. Now the box is released when you
@@ -12,6 +12,9 @@
   with the arrow keys and Tab is unchanged
 - The default source stays Cinemeta, and the source you choose in the
   menu is saved and kept on updates
+- The channels loading screen now covers the page with a solid
+  background, so the real channel tiles no longer show through the
+  loading animation while the list is being prepared
 - Updated the notes about which source works on which connection in
   the README and FAQ, and the network badge
 
