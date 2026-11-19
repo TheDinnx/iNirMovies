@@ -1,5 +1,20 @@
 # Changelog
 
+## 8.1.3
+- Fixed the settings text boxes staying selected: the custom skip
+  button boxes kept their highlighted border after the mouse left and
+  stayed that way when it came back. Now the box is released when you
+  click anywhere else, press Enter or Escape, and a box only lights up
+  while the mouse is really over it
+- The search box no longer stays highlighted after the mouse leaves
+  it: it lights up while the mouse is over it, or while it holds text
+  you typed, and goes back to normal otherwise. Keyboard navigation
+  with the arrow keys and Tab is unchanged
+- The default source stays Cinemeta, and the source you choose in the
+  menu is saved and kept on updates
+- Updated the notes about which source works on which connection in
+  the README and FAQ, and the network badge
+
 ## 8.1.2
 - New source menu instead of the Cinemana switch: Cinemeta, Cinemana
   and Cinemana X. Cinemana X is the same library on a different
@@ -66,6 +81,19 @@
   and user agent, referer and clear key options from the file are kept.
   Entries with the same name and category are merged into one channel
   with several servers
+
+- The skip button now reacts to the mouse: it gets lighter while the
+  pointer is over it and returns to normal as soon as the pointer
+  leaves the button or the window
+- The file info page (I) no longer shows the playback link or the
+  subtitle link: mpv's built-in statistics page, which printed them
+  with their keys, is turned off, and the safe info page is always
+  available
+- Builds now run on your own computer instead of GitHub Actions: one
+  command, ./go.sh, builds the Linux executable, builds the Windows
+  one with Wine, bundles bash and mpv for Windows, publishes the
+  release and updates this machine. It no longer depends on GitHub
+  artifact storage
 
 ## 8.0.7
 - Fixed the loading screen layout. The grey placeholder cards used to
