@@ -1,5 +1,33 @@
 # Changelog
 
+## 8.1.7
+- Liquid Glass is now real: a refraction shader bends and splits the
+  background near the edges of every panel like Apple's Liquid Glass, over a
+  live blurred copy of the app, with a moving specular rim, edge glow and soft
+  gloss. It applies to dialogs, cards, buttons, toggles, switches and combo
+  boxes. Themes with it: Liquid Glass, Liquid Glass Light, visionOS, tvOS,
+  iOS Dark, iOS Light, macOS Dark and macOS Light
+- Frosted glass for Windows 11, Windows 11 Light and Windows 10 (strong blur,
+  no refraction), and Aero glass for Windows Aero and Frutiger Aero (glossy
+  rim, light refraction)
+- 32 more core themes: Normcore, Gorpcore, Barbiecore, Balletcore, Dollcore,
+  Bardcore, Cutecore, Traumacore, Liminalcore, Poolcore, Nostalgiacore,
+  Vampirecore, Darkcore, Spacecore, Oceancore, Animecore, Gamercore, Hexcore,
+  Dragoncore, Forestcore, Rainbowcore, Sweetcore, Hackercore, Cybergoth,
+  Beachcore, Grandmacore, Crystalcore, Lunacore, Sunsetcore, Autumncore,
+  Springcore and Industrialcore, each with a matching effect
+- Tutorial: the tour no longer starts while you are still choosing the
+  language and theme in the first screen. It starts only after setup is done
+- Quality dialog: the title is now the movie or episode name and the
+  resolution is shown under it
+- Settings: removed the icons from the side menu, and the language row has a
+  languages icon instead of the EN badge
+- Channels: Sort with images first now ranks channels whose logo really loads
+  first. Logos that fail to load are remembered and moved down, and the list
+  re-sorts by itself shortly after new logos load or fail
+- shaders/glass.frag.qsb is built from scripts/shaders/glass.frag with
+  qsb --qt6 --glsl "100 es,120,150" --hlsl 50 --msl 12
+
 ## 8.1.6
 - Icons: fixed the icons that came out too big and out of place in the
   Theme Studio, the chips, the buttons and the settings headers, because
