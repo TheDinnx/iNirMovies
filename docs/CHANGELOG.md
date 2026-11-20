@@ -1,5 +1,67 @@
 # Changelog
 
+## 8.1.5
+- New Theme Studio. On the first launch the app asks for your language,
+  Arabic or English, then opens a full screen studio where you pick the
+  theme, the background effect and the button shape, and everything
+  changes live behind you. You can open it again any time from
+  Settings > Appearance > Theme Studio. People who already use the app
+  are not interrupted and can open it from Settings
+- 145 new themes, 172 in total, grouped into Systems (Windows 11, 10, XP
+  and 95, Aero, macOS, iOS, visionOS, Material You, One UI, HyperOS,
+  HarmonyOS, ChromeOS, Ubuntu, GNOME, KDE, Fedora, Arch, Mint, Pop!_OS,
+  Debian, Kali, Amiga, BeOS, Commodore 64, DOS, terminals, PlayStation,
+  Xbox, Switch, SteamOS and more), Games (Minecraft, Cyberpunk, Zelda
+  style, Halo, Valorant, Pac-Man, Tetris, DOOM, Elden Ring, Pokemon,
+  Fallout and more), Apps (Spotify, Netflix, Discord, Twitch, YouTube,
+  Telegram, WhatsApp, GitHub, Notion, Figma and more), Aesthetics
+  (Cottagecore, Synthwave, Vaporwave, Y2K, Dark Academia, Lo-fi,
+  Solarpunk, Kawaii and more) and extra classics including High
+  Contrast and a colorblind safe theme. Themes that have motion are
+  tagged as animated
+- Search for a theme by name, in English or Arabic, and filter by
+  category, in the Theme Studio and in Settings > Appearance
+- Five new background effects: Sparkles, Confetti, Pixels, Scanlines
+  and Aura, and every effect now has an icon. Picking a theme now
+  brings its own effect, and you can change the effect and its
+  intensity (Calm, Balanced, Lively) with a live preview
+- Button shape: choose Square, Rounded or Pill, with a preview, in the
+  Theme Studio and in Settings > Appearance. It applies to buttons,
+  cards, fields and tabs across the whole app
+- Small icons on the settings tabs and section titles. They are real
+  vector icons now, not emoji, and the whole Theme Studio uses them
+- New themes: Nothing OS (dark, light and Glyph with a dot matrix
+  effect), One UI Light, Galaxy AI, Liquid Glass Light, tvOS, Realme UI,
+  ColorOS, Flyme, webOS, Roku, Android TV, Fire OS, Wear OS, Zorin OS,
+  openSUSE, Gentoo, FreeBSD, Haiku, Plan 9, TempleOS, Windows 3.1,
+  Mac OS 9, NeXTSTEP and BlackBerry, and a new Dot matrix effect
+- The default button shape is now Pill. The selected theme card check
+  mark is centered
+- Cast to TV: a new button next to the source selector finds smart TVs
+  on your network (DLNA and AirPlay) and screens of this computer such
+  as HDMI or DisplayPort. Once a target is chosen, every quality you pick
+  and every channel plays on it instead of opening the player, and
+  subtitles are sent along. Turn it off from the same button
+- Choosing a quality now asks what to do with it: play, download or
+  cast. Downloads ask where to save, and a Downloads list appears only
+  after you start one, with progress, cancel, open folder and remove
+- Channels accept big category files like the ones from IPTV panels
+  (a categories object with name, stream_id, logo and url), keep their
+  categories and show the first 3000 results with a hint to use search
+  or a category
+- Channels can be sorted: default, with images first, with images last,
+  A to Z and Z to A
+- Play any link: paste a stream address, optionally set a name, user
+  agent and referer, play it right away or save it to My links
+- Channels no longer hide the app the moment you press them: a
+  "Starting the channel" screen shows until the player really starts,
+  and only then does the app close
+- The speed test now behaves like Speedtest: the number moves live from
+  the first second, it measures ping, download in blue and upload in
+  purple, and it no longer waits on a placeholder
+- Fixed the repeated "mv: cannot stat debug.log.tmp" lines in the
+  terminal and a layout warning in the Windows settings card
+
 ## 8.1.4
 - Fixed the settings text boxes staying selected: the custom skip
   button boxes kept their highlighted border after the mouse left and
