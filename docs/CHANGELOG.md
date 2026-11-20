@@ -1,5 +1,74 @@
 # Changelog
 
+## 8.1.6
+- Icons: fixed the icons that came out too big and out of place in the
+  Theme Studio, the chips, the buttons and the settings headers, because
+  a layout ignored the icon size. Fixed the settings tabs where some icons
+  showed as black dots and others did not show at all, because the icon
+  color was not a valid SVG color and closed shapes were filled black
+- First screen redesign: a centered welcome with only iNir Movies as the
+  title, a moving light line under it, an animated aurora background,
+  Choose your language in English and Arabic on two lines, larger language
+  cards and a Continue button right under them
+- Six more effects, now 34 and grouped by type: Retro grid with a sun,
+  Dust, Spores, Clouds, Gears and Hearts, each fully animated
+- 24 more themes, one for every core style: Fairycore, Kidcore,
+  Weirdcore, Angelcore, Cloudcore, Mushroomcore, Bloomcore, Froggycore,
+  Mermaidcore, Royalcore, Ghostcore, Techcore, Coquette, Sleepycore,
+  Wintercore, Fantasycore, Piratecore, Vapor Sunset, Retrowave, Academia
+  Dust, Steam Gears, Dream Clouds, Gothic Hearts and Space Grid, each
+  paired with a matching effect. Retrowave, Vapor Sunset and Techcore are
+  featured
+- Google TV and Chromecast: Cast to TV now finds Google Cast devices and
+  plays on them. Subtitles are converted to WebVTT and served from this
+  computer so the TV can load them. Hisense, Samsung, LG and Sony TVs work
+  through DLNA, Google TV Hisense models through Google Cast, and
+  subtitles are also sent to DLNA TVs
+- Subtitles for downloads: when you download a movie or an episode the
+  Arabic, English and other subtitle files are now saved next to it with
+  the same name, so any player loads them
+- Playing on an HDMI or DisplayPort screen keeps using the same subtitle
+  settings as the normal player
+- New themes: Nothing OS (dark, light and Glyph with a dot matrix
+  effect), One UI Light, Galaxy AI, Liquid Glass Light, tvOS, Realme UI,
+  ColorOS, Flyme, webOS, Roku, Android TV, Fire OS, Wear OS, Zorin OS,
+  openSUSE, Gentoo, FreeBSD, Haiku, Plan 9, TempleOS, Windows 3.1,
+  Mac OS 9, NeXTSTEP and BlackBerry, and a new Dot matrix effect
+- Six more effects, now 28 in total and grouped in the Theme Studio by
+  Basic, Nature, Space and light, Fire and energy, Digital and retro and
+  Fun: Waves, Color flow, Light rays, Glitch, Lanterns and Dot matrix
+- 33 more animated themes (Ocean Waves, Color Flow, God Rays, Glitch
+  City, Lantern Festival, Neon Rain, Midnight Aurora, Dot Matrix and
+  more). The Theme Studio opens on a new Featured tab with the best
+  themes first, and in every list the featured themes come first, then
+  the animated ones, then the rest
+- The default button shape is now Pill. The selected theme card check
+  mark is centered
+- Cast to TV: a new button next to the source selector finds smart TVs
+  on your network (DLNA and AirPlay) and screens of this computer such
+  as HDMI or DisplayPort. Once a target is chosen, every quality you pick
+  and every channel plays on it instead of opening the player, and
+  subtitles are sent along. Turn it off from the same button
+- Choosing a quality now asks what to do with it: play, download or
+  cast. Downloads ask where to save, and a Downloads list appears only
+  after you start one, with progress, cancel, open folder and remove
+- Channels accept big category files like the ones from IPTV panels
+  (a categories object with name, stream_id, logo and url), keep their
+  categories and show the first 3000 results with a hint to use search
+  or a category
+- Channels can be sorted: default, with images first, with images last,
+  A to Z and Z to A
+- Play any link: paste a stream address, optionally set a name, user
+  agent and referer, play it right away or save it to My links
+- Channels no longer hide the app the moment you press them: a
+  "Starting the channel" screen shows until the player really starts,
+  and only then does the app close
+- The speed test now behaves like Speedtest: the number moves live from
+  the first second, it measures ping, download in blue and upload in
+  purple, and it no longer waits on a placeholder
+- Fixed the repeated "mv: cannot stat debug.log.tmp" lines in the
+  terminal and a layout warning in the Windows settings card
+
 ## 8.1.5
 - New Theme Studio. On the first launch the app asks for your language,
   Arabic or English, then opens a full screen studio where you pick the
@@ -28,39 +97,7 @@
 - Button shape: choose Square, Rounded or Pill, with a preview, in the
   Theme Studio and in Settings > Appearance. It applies to buttons,
   cards, fields and tabs across the whole app
-- Small icons on the settings tabs and section titles. They are real
-  vector icons now, not emoji, and the whole Theme Studio uses them
-- New themes: Nothing OS (dark, light and Glyph with a dot matrix
-  effect), One UI Light, Galaxy AI, Liquid Glass Light, tvOS, Realme UI,
-  ColorOS, Flyme, webOS, Roku, Android TV, Fire OS, Wear OS, Zorin OS,
-  openSUSE, Gentoo, FreeBSD, Haiku, Plan 9, TempleOS, Windows 3.1,
-  Mac OS 9, NeXTSTEP and BlackBerry, and a new Dot matrix effect
-- The default button shape is now Pill. The selected theme card check
-  mark is centered
-- Cast to TV: a new button next to the source selector finds smart TVs
-  on your network (DLNA and AirPlay) and screens of this computer such
-  as HDMI or DisplayPort. Once a target is chosen, every quality you pick
-  and every channel plays on it instead of opening the player, and
-  subtitles are sent along. Turn it off from the same button
-- Choosing a quality now asks what to do with it: play, download or
-  cast. Downloads ask where to save, and a Downloads list appears only
-  after you start one, with progress, cancel, open folder and remove
-- Channels accept big category files like the ones from IPTV panels
-  (a categories object with name, stream_id, logo and url), keep their
-  categories and show the first 3000 results with a hint to use search
-  or a category
-- Channels can be sorted: default, with images first, with images last,
-  A to Z and Z to A
-- Play any link: paste a stream address, optionally set a name, user
-  agent and referer, play it right away or save it to My links
-- Channels no longer hide the app the moment you press them: a
-  "Starting the channel" screen shows until the player really starts,
-  and only then does the app close
-- The speed test now behaves like Speedtest: the number moves live from
-  the first second, it measures ping, download in blue and upload in
-  purple, and it no longer waits on a placeholder
-- Fixed the repeated "mv: cannot stat debug.log.tmp" lines in the
-  terminal and a layout warning in the Windows settings card
+- Small icons on the settings tabs and section titles
 
 ## 8.1.4
 - Fixed the settings text boxes staying selected: the custom skip
