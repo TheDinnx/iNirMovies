@@ -1,5 +1,28 @@
 # Changelog
 
+## 8.1.8
+- Window: the Window size setting now controls the real window of the app,
+  the interface is no longer shrunk with a frame around it. Smart maximizes the
+  window to fill the screen, Default is a standard centered window and Custom
+  lets you choose the exact width and height. The layout adapts inside the
+  window to its size. F11 switches full screen on and off
+- Network: the Download and Upload tiles are centered, the icon and the text
+  now sit in the middle of the tile
+- Settings: the General icon is now a house icon, in the header, in the side
+  list of the tour and in the tour chips
+- Update: the what changed box has a visible scroll bar and scrolls with the
+  mouse wheel and the touchpad, so long notes can be read to the end
+- Fonts: choosing a font now applies at once and is saved, and the box shows
+  the real name of the chosen font instead of the old one. A font picked with
+  Browse is remembered, appears in the list with the other fonts and is
+  available again after a restart. The list always opens, with the right height.
+  The list shows only fonts really installed on your system plus your saved
+  fonts, so picking a font always changes something. Noto Sans Arabic and
+  Noto Kufi Arabic are no longer reset to the default after a restart, and a
+  saved font whose file was deleted is removed from the list
+- Live preview in the Theme Studio now shows Liquid Glass, Frosted and Aero
+  glass on the preview, its tabs, search bar, cards and buttons
+
 ## 8.1.7
 - Liquid Glass is now real: a refraction shader bends and splits the
   background near the edges of every panel like Apple's Liquid Glass, over a
