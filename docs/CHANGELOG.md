@@ -1,5 +1,14 @@
 # Changelog
 
+## 8.2.5
+- Account: signing in with Google now brings your Google name and your Google profile picture. The picture shows in the account card instead of the first letter, and the name replaces the username there. The control server fetches them from Google, so they come back right after every sign in.
+- Account: you can set your own picture. Settings > General > Account has a Set picture button that opens the file picker for images, crops the picture to a square, shrinks it and saves it on your account on the control server. It follows you to every device. Reset picture goes back to your Google picture, or to the letter when there is none.
+- Account: the name and the picture are loaded again every time the app starts while you are signed in, and cleared when you sign out or delete the account.
+- Google sign in: the release now makes sure the Google sign in asks for the profile permission, which is what allows the name and the picture to come through.
+- Release: the test that starts the built Linux executable now waits until the sound files really exist (up to 90 seconds) instead of stopping after 15 seconds, and finds them in any cache folder. This fixes the "started but the shell scripts did not run" failure.
+- Sounds: the tutorial sounds are now written by one self-contained shell command, so a missing cache folder can no longer stop them from being created.
+- This version includes everything from 8.2.2 and 8.2.3, listed below.
+
 ## 8.2.3
 - Update: the app now updates itself directly from the downloaded release, with no package manager and no terminal command. The Update now button always works, the broken box that overlapped the Update now, Check again and Release page buttons is gone, and the buttons sit in one clean row.
 - Update: if an older copy was installed through pacman, the first in-app update installs the new copy for your user and removes the old pacman package for you, so only one copy remains.
