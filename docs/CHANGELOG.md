@@ -1,5 +1,8 @@
 # Changelog
 
+## 8.2.1
+- 
+
 ## 8.2.0
 - Window: a new Full screen choice in the Window size setting. The app covers
   the whole screen without the title bar and the layout adapts to it. It is
