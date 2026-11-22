@@ -5,3 +5,6 @@ dist/*
 *.zip
 *.exe
 SHA256SUMS
+dist/*
+!dist/.gitkeep
+/iNirMovies

@@ -1,5 +1,12 @@
 # Changelog
 
+## 8.2.3
+- Update: the app now updates itself directly from the downloaded release, with no package manager and no terminal command. The Update now button always works, the broken box that overlapped the Update now, Check again and Release page buttons is gone, and the buttons sit in one clean row.
+- Update: if an older copy was installed through pacman, the first in-app update installs the new copy for your user and removes the old pacman package for you, so only one copy remains.
+- Account: fixed Create account and Sign in failing with Could not reach the server. The password hashing on the control server used more rounds than Cloudflare allows. The error message now also shows the server status code.
+- Admin panel: the Google sign in card now lists the exact steps to get the Client ID and Client secret, with a button that opens Google Cloud Console.
+- Release: releases no longer build a pacman package, and the control server is redeployed automatically whenever its code changes.
+
 ## 8.2.2
 - Casting to a TV now guarantees subtitles show up: the first time you connect to a new TV you pick Arabic or English once, and the app burns the subtitle into the picture (needs ffmpeg) so it isn't left up to the TV's own subtitle support.
 - Casting now has a real transport bar: play/pause, a draggable seek bar, and live position while casting to a smart TV or Chromecast.
