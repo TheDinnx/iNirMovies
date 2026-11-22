@@ -1,5 +1,12 @@
 # Changelog
 
+## 8.2.2
+- Casting to a TV now guarantees subtitles show up: the first time you connect to a new TV you pick Arabic or English once, and the app burns the subtitle into the picture (needs ffmpeg) so it isn't left up to the TV's own subtitle support.
+- Casting now has a real transport bar: play/pause, a draggable seek bar, and live position while casting to a smart TV or Chromecast.
+- New optional account: create one from Settings → General and your settings, favorites, watch history, continue watching and search history are saved on your account instead of this device. While you are signed in none of them is written to the device, the device ID and device paths stay local, and the first sign in moves what was already saved here to the account.
+- Theme sharing: share your current theme as a link; opening it previews the theme and applies it with one tap.
+- Fixed the admin dashboard's "Downloads" stat being unclear (it's the lifetime GitHub release download count, now labeled as such) and made the admin panel's navigation buttons give proper press/hover feedback.
+
 ## 8.2.1
 - 
 
