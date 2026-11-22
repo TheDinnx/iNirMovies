@@ -1,5 +1,38 @@
 # Changelog
 
+## 8.2.0
+- Window: a new Full screen choice in the Window size setting. The app covers
+  the whole screen without the title bar and the layout adapts to it. It is
+  remembered after a restart. F11 still switches full screen on and off
+- Network: the Download and Upload tiles no longer have icons and keep their
+  text in the exact middle. After the test finishes the gauge goes back to
+  Download with -- instead of staying on the last result
+- Update: the scroll bar of the what changed box is moved away from the text
+- Channels: restarting while you were on the Channels tab now loads the
+  channels right away instead of staying on Loading channels. Saved custom
+  links show up at once when no channels file is selected
+- Fonts: the default font is always the first choice in the English and Arabic
+  font lists, so you can go back to it after picking another font
+- Icons: some icons now move when they have something to say. The scan icon
+  spins while searching for devices and while the network test runs, the cast
+  icon pulses while casting, and the download icon bounces while a download is
+  running
+- Device ID: every install has an ID you can copy from Settings, Update
+- Developer control: a new control service lets the developer manage the app
+  live. Users can see notices and banners, a maintenance screen, an update
+  required screen, and a ban screen with the reason. A ban by device or by IP
+  can also close the app. The developer can turn any command off or on for
+  everyone or for one device or IP, and a turned off command shows a red box
+  with a ban icon. The developer can also push a theme and a background effect
+  to everyone. Nothing happens until a control server address is set in the
+  app
+- Admin panel: a private admin app in the admin folder with live numbers,
+  devices, bans, commands, notices, appearance, controls and history, in English
+  and Arabic, with the app icon, the Lunacore theme and the Light rays
+  effect. It is not part of the released app
+- One command: go.sh now also installs the admin panel and deploys the free
+  control server before it builds and releases
+
 ## 8.1.8
 - Window: the Window size setting now controls the real window of the app,
   the interface is no longer shrunk with a frame around it. Smart maximizes the
