@@ -1,5 +1,15 @@
 # Changelog
 
+## 8.3.0
+- Theme links: the shared theme page now plays the real effect of the theme (all 32 effects are drawn on the page, in the shared colors, intensity and speed) instead of the same falling dots every time. Links made by older versions still show the right effect, because the page now looks up the effect of the theme itself when the link was saved with Auto.
+- Theme links: the Open in iNir Movies button now really opens the app. iNir Movies registers itself as the handler of inirmovies:// links on Linux and Windows the first time 8.3.0 starts, and the link opens the full preview in the running app, or starts the app and opens the preview if it was closed. The page also has a Copy link button and a message that explains what to do when nothing opens.
+- Theme links: the Share theme and effect button now saves the effect that is really running, not the word Auto, so what you share is what the other person sees.
+- Cast: the small bar at the bottom is removed. Starting a cast now goes straight to the full screen TV remote, and the cast button in the top bar reopens the remote while a cast is running. Closing the remote keeps the cast playing, and Stop casting is inside the remote.
+- Channels: the channels file you choose is now saved inside the app. If the original file is moved, renamed or deleted, or the app starts without the saved path, the channels still load from the saved copy. Choosing another file replaces the saved copy.
+- Themes: the theme studio now has a Share theme button, in the top bar next to Close and next to Done at the bottom. It creates the link of the theme and effect you are previewing, and the share and preview windows now open above the studio.
+- Developer control: a ban on a button or a command, a theme push, a banner or any other change from the admin panel now reaches open apps within about 15 seconds, with no restart. The app asks the server for a small revision number every 15 seconds while its window is visible, and downloads the full control file only when the number changed. The full check every 5 minutes stays as it was.
+- Release: the release commit for the app now carries the notes of the version being released instead of an old fixed message, and any leftover fixed text like bump version to 7.8.6-2 in publish.sh is rewritten to the real version before publishing.
+
 ## 8.2.8
 - Cast: the full screen remote no longer shows the poster of a movie you opened earlier. It shows the poster of what is really being cast, the channel logo for channels, or no picture when there is none.
 - Cast: when you cast a live channel the remote shows a LIVE badge and hides the subtitle preview, the seek bar and the jump buttons, because a live channel cannot be jumped, and only play and pause stay.
