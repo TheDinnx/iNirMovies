@@ -1,5 +1,9 @@
 # Changelog
 
+## 8.2.8
+- Cast: the full screen remote no longer shows the poster of a movie you opened earlier. It shows the poster of what is really being cast, the channel logo for channels, or no picture when there is none.
+- Cast: when you cast a live channel the remote shows a LIVE badge and hides the subtitle preview, the seek bar and the jump buttons, because a live channel cannot be jumped, and only play and pause stay.
+
 ## 8.2.7
 - Cast: when a TV cannot jump inside a stream with burned-in subtitles (Hisense), the app now fixes it by itself. It switches that TV to a seekable stream, remembers the choice for that TV, and jumps to the position you asked for. After that, back and forward work on that TV every time.
 - Account picture: the picture is now drawn through the canvas image loader and checked before it is saved. A blank or white result is never uploaded; the app redraws it, and shows a message if the picture cannot be read.
