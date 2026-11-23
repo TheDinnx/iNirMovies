@@ -1,5 +1,16 @@
 # Changelog
 
+## 8.2.6
+- Cast: the Hisense jump problem is fixed on the app side. The seek bar no longer snaps back when the TV answers with its old position, it stays enabled even when the TV does not report the movie length, the position keeps counting when the TV stops reporting it, and every jump is checked and retried up to three times before an explanation is shown.
+- Cast: a new full screen remote opens from the monitor button on the cast bar. It has back 30 s, back 10 s, play and pause, forward 10 s, forward 30 s, a big seek bar, the movie poster as background, and keyboard keys (left, right, space, Escape).
+- Cast: the remote shows a live subtitle preview that uses the player's subtitle size, color, background and fonts.
+- Screen: playing on a screen of this computer now uses a huge cache (up to 4 GB ahead and 2 GB behind, 2 hours of readahead) so large movies and heavy streams do not stall.
+- Account picture: fixed the picture saving as a blank white circle on the first try. The picture is now checked after drawing and redrawn until it really contains the image, big pictures are decoded at a safe size, and choosing another picture while one is still saving is ignored. This also fixes the crash when choosing several pictures.
+- Fixed the log spam QML NumberAnimation setPaused() cannot be used when animation isn't running in the tutorial.
+- Themes: new Share theme and effect button in Settings > Appearance. It creates a link for the theme with its effect, intensity, speed, corners and glow, and Copy link puts it on the clipboard.
+- Themes: a new Open a theme link box and a full preview screen with the live effect, a mini app preview in the shared colors and one tap to apply the theme and its effect.
+- Themes: the web page of a shared link is redesigned with the animated effect, the colors, a mini app preview and an Open in iNir Movies button.
+
 ## 8.2.5
 - Account: signing in with Google now brings your Google name and your Google profile picture. The picture shows in the account card instead of the first letter, and the name replaces the username there. The control server fetches them from Google, so they come back right after every sign in.
 - Account: you can set your own picture. Settings > General > Account has a Set picture button that opens the file picker for images, crops the picture to a square, shrinks it and saves it on your account on the control server. It follows you to every device. Reset picture goes back to your Google picture, or to the letter when there is none.
