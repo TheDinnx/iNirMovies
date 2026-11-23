@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.2.7
+- Cast: when a TV cannot jump inside a stream with burned-in subtitles (Hisense), the app now fixes it by itself. It switches that TV to a seekable stream, remembers the choice for that TV, and jumps to the position you asked for. After that, back and forward work on that TV every time.
+- Account picture: the picture is now drawn through the canvas image loader and checked before it is saved. A blank or white result is never uploaded; the app redraws it, and shows a message if the picture cannot be read.
+- Log: removed the deprecated Qt.atob call, fixed the palette property that overrode the Rectangle palette, and the release now replaces an invalid Qt style override such as Darkly with Fusion.
+
 ## 8.2.6
 - Cast: the Hisense jump problem is fixed on the app side. The seek bar no longer snaps back when the TV answers with its old position, it stays enabled even when the TV does not report the movie length, the position keeps counting when the TV stops reporting it, and every jump is checked and retried up to three times before an explanation is shown.
 - Cast: a new full screen remote opens from the monitor button on the cast bar. It has back 30 s, back 10 s, play and pause, forward 10 s, forward 30 s, a big seek bar, the movie poster as background, and keyboard keys (left, right, space, Escape).
