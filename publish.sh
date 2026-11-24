@@ -40,7 +40,7 @@ fi
 
 commits=(
     ".gitignore|chore(git): ignore build output and release binaries"
-    "VERSION|chore(release): bump version to 8.3.0"
+    "VERSION|chore(release): bump version to 8.3.1"
     "LICENSE|docs(license): scope license to GitHub Releases distribution"
     "assets/icons/appIcon.svg|feat(assets): add application icon"
     "assets/screenshots/.gitkeep|chore(assets): add screenshots directory"
