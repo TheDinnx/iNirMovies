@@ -1,5 +1,12 @@
 # Changelog
 
+## 8.5.0
+- Admin devices: the app now reports the computer's host name to the control server, so the device list shows the real device name instead of "Unnamed device".
+- Admin devices: old device records with no name are filled in on the next check-in. Manually assigned names are preserved and are not overwritten by the computer name.
+- App and server: device names are sent with both control checks and heartbeats, and are safely limited in length before storage.
+- Admin list: records that have not yet sent a device name show their device ID instead of the misleading "Unnamed device" label.
+- Release: raised the app and updater version to 8.5.0 for the matching client and server update.
+
 ## 8.4.7
 - Google sign-in: the account form remains usable while the external browser is open. The sign-in and create-account tabs can still be changed, Google sign-in can be canceled, and closing the browser no longer leaves the app stuck waiting.
 - Google sign-in: canceling closes the pending local OAuth listener; browser-launch failures and timeouts now release the pending state. The Google button icon remains still instead of spinning.
