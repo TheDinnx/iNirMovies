@@ -1,5 +1,11 @@
 # Changelog
 
+## 8.4.7
+- Google sign-in: the account form remains usable while the external browser is open. The sign-in and create-account tabs can still be changed, Google sign-in can be canceled, and closing the browser no longer leaves the app stuck waiting.
+- Google sign-in: canceling closes the pending local OAuth listener; browser-launch failures and timeouts now release the pending state. The Google button icon remains still instead of spinning.
+- Device identity: the app now saves and restores its device ID from local application configuration, so reopening the app keeps the existing device record.
+- Admin: mouse hover feedback clears when the pointer leaves a button, including after a canceled or completed press.
+
 ## 8.3.0
 - Theme links: the shared theme page now plays the real effect of the theme (all 32 effects are drawn on the page, in the shared colors, intensity and speed) instead of the same falling dots every time. Links made by older versions still show the right effect, because the page now looks up the effect of the theme itself when the link was saved with Auto.
 - Theme links: the Open in iNir Movies button now really opens the app. iNir Movies registers itself as the handler of inirmovies:// links on Linux and Windows the first time 8.3.0 starts, and the link opens the full preview in the running app, or starts the app and opens the preview if it was closed. The page also has a Copy link button and a message that explains what to do when nothing opens.
