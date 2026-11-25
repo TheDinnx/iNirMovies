@@ -1,5 +1,17 @@
 # Changelog
 
+## 8.5.1
+- Admin devices: show the hardware model before the Linux distribution, or the model before Windows. Device host names are neither displayed nor sent.
+- Admin devices: refresh previously generated model/distribution labels on check-in without overwriting names manually assigned in Admin.
+- Admin pointer: remove button hover highlights and detached hover handlers so neither the cursor nor a blue hover state can stick after leaving a control.
+- Continue Watching: mark new account playback before mpv handoff, poll player saves while the app is open, and sync progress updates immediately.
+- Continue Watching: use unique progress markers and clear only the exact version accepted by the server, retaining newer saves during overlapping syncs.
+- Continue Watching: save a local player-readable copy for mpv, track pending progress changes and merge them back into the signed-in account on its next sync.
+- Continue Watching: write player progress atomically, retain unfinished positions and remove completed videos from the list.
+- Home, search and channels: adapt Compact poster columns to the actual grid width so cards remain readable in narrower windows and use wide windows consistently.
+- Admin: remove hover highlights that could remain blue after leaving a control, and show the iNir Admin SVG icon in the QML window title bar and task switcher.
+- Release: keep the app and updater version at 8.5.1.
+
 ## 8.5.0
 - Admin devices: the app now reports the computer's host name to the control server, so the device list shows the real device name instead of "Unnamed device".
 - Admin devices: old device records with no name are filled in on the next check-in. Manually assigned names are preserved and are not overwritten by the computer name.
