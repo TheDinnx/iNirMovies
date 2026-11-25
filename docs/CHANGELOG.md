@@ -1,5 +1,16 @@
 # Changelog
 
+## 8.5.3
+- Sources: wait for saved preferences before the first dashboard request, and skip the shared Cinemeta Trending cache when Cinemana or Cinemana X is selected.
+- Sources: preserve the legacy Cinemana-enabled preference when older saved source fields disagree, so the selected Cinemana catalog loads instead of Cinemeta.
+- Home layout: relayout movie, TV and search grids after window resizing and state restoration so cards use the final available dimensions.
+- Release: bump the app and updater to 8.5.3.
+
+## 8.5.2
+- Playback: prevent mpv startup failures by passing Continue Watching paths and account markers through environment variables instead of percent-encoded `script-opts`.
+- Playback source: honor the currently selected Cinemana/Cinemana X mode at every playback start instead of relying on a potentially stale boolean.
+- Release: bump the app and updater to 8.5.2.
+
 ## 8.5.1
 - Admin devices: show the hardware model before the Linux distribution, or the model before Windows. Device host names are neither displayed nor sent.
 - Admin devices: refresh previously generated model/distribution labels on check-in without overwriting names manually assigned in Admin.
