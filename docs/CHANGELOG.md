@@ -1,5 +1,16 @@
 # Changelog
 
+## 8.5.4
+- Startup: read and write cache files directly in Python instead of starting bash for each file, avoiding slow startup and the empty first-run screens it could cause on Windows.
+- Accounts: save the full signed-in account locally, including settings, favorites and Continue Watching, so it is available immediately when the app opens.
+- Accounts: wait for server sync before showing onboarding instructions or requesting the first catalog when an older local cache has no full account copy; retry failed syncs with a timeout without trapping the app on first-run screens.
+- Accounts: preserve the locally selected section and source when account data arrives.
+- Catalog: skip reloads when the source, type, category, sort order and language have not changed; cancel or ignore outdated requests and request only the visible section on startup.
+- Cinemana: cache catalogs on disk per source and refresh caches older than 20 minutes in the background.
+- Continue Watching: correctly write titles containing apostrophes, such as `Don't`, to JSON.
+- Admin: clear focus after buttons, tabs and toggles are clicked, and clear their pressed state when the pointer leaves.
+- Release: bump the app and updater to 8.5.4.
+
 ## 8.5.3
 - Sources: wait for saved preferences before the first dashboard request, and skip the shared Cinemeta Trending cache when Cinemana or Cinemana X is selected.
 - Sources: preserve the legacy Cinemana-enabled preference when older saved source fields disagree, so the selected Cinemana catalog loads instead of Cinemeta.
