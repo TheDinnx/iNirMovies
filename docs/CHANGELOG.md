@@ -1,15 +1,18 @@
 # Changelog
 
 ## 8.5.4
-- Startup: read and write cache files directly in Python instead of starting bash for each file, avoiding slow startup and the empty first-run screens it could cause on Windows.
-- Accounts: save the full signed-in account locally, including settings, favorites and Continue Watching, so it is available immediately when the app opens.
-- Accounts: wait for server sync before showing onboarding instructions or requesting the first catalog when an older local cache has no full account copy; retry failed syncs with a timeout without trapping the app on first-run screens.
-- Accounts: preserve the locally selected section and source when account data arrives.
-- Catalog: skip reloads when the source, type, category, sort order and language have not changed; cancel or ignore outdated requests and request only the visible section on startup.
-- Cinemana: cache catalogs on disk per source and refresh caches older than 20 minutes in the background.
-- Continue Watching: correctly write titles containing apostrophes, such as `Don't`, to JSON.
-- Admin: clear focus after buttons, tabs and toggles are clicked, and clear their pressed state when the pointer leaves.
-- Release: bump the app and updater to 8.5.4.
+- Startup: the app now reads and writes its saved state directly instead of starting a shell for every file, so Windows no longer waits for slow shell start-up and then opens as if it were a fresh install.
+- Startup: signed-in accounts keep a complete local copy of their settings and data, so the saved theme, section, source and library appear immediately instead of after the account sync finishes.
+- Startup: older installs that only have a partial local copy no longer show the theme setup, the tutorial or the default Cinemeta catalog while the account sync is still loading. The first catalog request waits for the account preferences.
+- Account sync: a failed or slow sync is retried with a request timeout, and a device that already has an account is no longer blocked by the first-run screens when the sync cannot be reached.
+- Account sync: the section and source chosen on this device are kept when the account data arrives.
+- Catalog: pressing Movies or TV Shows no longer reloads a catalog that is already loaded for the current source, genre, sort and language. Switching sections is instant and no longer repeats the large Cinemana download.
+- Catalog: requests are cancelled and ignored once a newer one starts, so switching sections, sources, genres or sorting quickly cannot mix results or pile up requests that could close the app.
+- Catalog: the Cinemana catalog is saved on disk per source, so the selected source loads from its own cache on start and refreshes in the background when it is older than twenty minutes. At start only the visible section is requested.
+- Continue Watching: titles containing an apostrophe are saved as valid data again.
+- Cache files are written atomically with a backup, so an interrupted write can no longer leave a damaged file.
+- Admin: buttons, tabs, toggles and chips release keyboard focus when pressed and return to their normal state as soon as the pointer leaves, so text fields and buttons no longer keep the blue focus state.
+- Release: bumped the app and updater to 8.5.4.
 
 ## 8.5.3
 - Sources: wait for saved preferences before the first dashboard request, and skip the shared Cinemeta Trending cache when Cinemana or Cinemana X is selected.
