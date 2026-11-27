@@ -1,5 +1,24 @@
 # Changelog
 
+## 8.6.0
+- Window: on Windows the title bar with the minimize, maximize and close buttons no longer disappears after changing the window mode or leaving full screen. The window size and position are now applied only after the window has finished changing state, and a guard restores the missing frame and caption buttons if Windows drops them.
+- Scrolling: on Windows, scrolling past the end of the movie, TV show or search lists no longer moves the cards behind the list. The wheel is now absorbed at the top and bottom of these lists instead of leaking to the layer underneath.
+- Search: fixed the white vertical bar that appeared inside the search box on Windows when the app opened. The text cursor is now drawn in the theme accent color and only shows once you type or point at the box, and the selection color follows the theme.
+- Pointer: the season buttons (S1, S2, ...) now show the hand cursor and react to the mouse with a light hover effect, and the tutorial text box shows the hand cursor too, so every clickable part of the app now gives feedback.
+- Performance: posters, cast photos, episode pictures, channel logos, provider logos and the blurred cast background are now decoded at the size they are displayed instead of their full size, which cuts memory use and makes scrolling and opening windows smoother, especially on Windows.
+- Performance: poster grids no longer build mipmaps for every poster, saving GPU work while the lists load.
+- Performance: search results now fade in with one light animation instead of moving, scaling and fading every card together, so large result lists appear faster.
+- Admin: every button, toggle, tab, theme chip, effect chip, sidebar item, lock button and close button now shows the hand cursor.
+- Admin: buttons, toggles, tabs, chips and sidebar items react to the mouse with a hover shade, a press effect and a slight grow, and the effect clears the moment the pointer leaves, so no control keeps a stuck state.
+- Admin: toggles stretch their knob while pressed and show a clearer border on hover.
+- Admin commands: each group now has Allow group and Restrict group buttons that work for everyone or for the selected device or IP, and a red counter shows how many commands in the group are restricted.
+- Admin commands: the search box has a clear button, and every command card reacts when the pointer is over it.
+- Admin backup: new Backup card in Settings. Export saves the commands, restrictions per device or IP, bans, notices, maintenance, banner, theme, minimum version and admin devices to a JSON file, and Import and replace or Import and merge loads it on any device. Merge keeps what is already there and adds the new entries without duplicates. The file never contains the token or the PIN, and an imported backup is added to the draft so it reaches users when published.
+- Admin on Windows: the panel now runs on Windows. Settings and the encrypted vault are kept in the AppData folder, the vault key uses the Windows machine identifier, command and ID fields use Consolas, and the title bar follows the dark theme.
+- Admin on Windows: added icon.ico with every size from 16 to 256, a run.bat launcher without a console window, install.ps1 that installs PySide6 and adds iNir Admin to the Start menu and desktop with its icon, and buildExe.ps1 that builds iNirAdmin.exe with the icon. scripts/makeAdminIcon.py rebuilds the icon from the SVG.
+- Admin: added a ready-made inir-admin.desktop file with the name, icon, categories and keywords. install.sh and the admin window now build the menu entry from it, so iNir Admin appears in the application menu with its own icon.
+- Release: bumped the app and updater to 8.6.0.
+
 ## 8.5.4
 - Startup: the app now reads and writes its saved state directly instead of starting a shell for every file, so Windows no longer waits for slow shell start-up and then opens as if it were a fresh install.
 - Startup: signed-in accounts keep a complete local copy of their settings and data, so the saved theme, section, source and library appear immediately instead of after the account sync finishes.
@@ -12,6 +31,8 @@
 - Continue Watching: titles containing an apostrophe are saved as valid data again.
 - Cache files are written atomically with a backup, so an interrupted write can no longer leave a damaged file.
 - Admin: buttons, tabs, toggles and chips release keyboard focus when pressed and return to their normal state as soon as the pointer leaves, so text fields and buttons no longer keep the blue focus state.
+- Source: Cinemana is now the default source, and a fresh or empty state opens on Cinemana instead of Cinemeta.
+- Admin: the window now registers its own application id, desktop entry and icon, so the task switcher and the taskbar show the iNir Admin icon instead of the Python icon.
 - Release: bumped the app and updater to 8.5.4.
 
 ## 8.5.3
