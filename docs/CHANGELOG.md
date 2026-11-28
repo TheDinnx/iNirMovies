@@ -1,8 +1,21 @@
 # Changelog
 
+## 8.6.1
+- Tutorial: all 23 tutorial sounds are new again, softer and warmer. Every step plays a short plucked-string phrase on a calm pentatonic scale that climbs gently as the tour moves forward, so nothing clashes and nothing sounds sharp. The start, finish and exit sounds are fuller, with a soft pad and a deep low note, and the tip sound is lighter and quieter so it never gets tiring.
+- Tutorial: the sounds are stored under a new cache name, so the new ones replace the old ones automatically the first time they play, and the old files are deleted. The playback volume is a little lower.
+- Linux: removed the Arabic comment line from the application menu entries of iNir Movies and iNir Admin.
+- Admin on Windows: the program is now called iNir Admin everywhere. The executable is iNir Admin.exe, the file properties and the Task Manager name read iNir Admin, and the settings folder is %APPDATA%\iNir Admin. Settings saved in the old iNirAdmin folder are moved there automatically.
+- Admin: ready-made executables. iNir Admin.exe for Windows and inir-admin for Linux are built on this machine together with the app, and the release step publishes them as a release in the build repository. The Linux archive includes an install script that adds iNir Admin to the application menu.
+- Admin: buildExe.ps1 now builds a single iNir Admin.exe in dist\admin, and exported backups are named iNir-Admin-backup.
+- Release: bumped the app and updater to 8.6.1.
+
 ## 8.6.0
 - Window: on Windows the title bar with the minimize, maximize and close buttons no longer disappears after changing the window mode or leaving full screen. The window size and position are now applied only after the window has finished changing state, and a guard restores the missing frame and caption buttons if Windows drops them.
-- Scrolling: on Windows, scrolling past the end of the movie, TV show or search lists no longer moves the cards behind the list. The wheel is now absorbed at the top and bottom of these lists instead of leaking to the layer underneath.
+- Scrolling: on Windows, scrolling past the end of the movie, TV show or search lists, or over a list that fits the screen, no longer moves the cards behind it. The wheel is absorbed by the list under the pointer instead of leaking to the layer underneath.
+- Scrolling: the mouse wheel over the Continue Watching, Watch History, Favorites and Recent Searches rows now scrolls the page up and down instead of sliding the row sideways. Use Shift with the wheel to move a row sideways.
+- Tutorial: replaced all 23 tutorial sounds with new original melodic sounds. Each step has its own short phrase that rises as the tour moves forward, and the start, tip, guide, finish and exit sounds are fuller stereo pieces with a soft pad and bell tones.
+- Linux: the application menu entry is now named iNir Movies instead of iNirMovies, with its icon, categories and keywords, and the same entry is used by the installer and the package.
+- Admin: the icon is the same as the iNir Movies icon on Linux and Windows.
 - Search: fixed the white vertical bar that appeared inside the search box on Windows when the app opened. The text cursor is now drawn in the theme accent color and only shows once you type or point at the box, and the selection color follows the theme.
 - Pointer: the season buttons (S1, S2, ...) now show the hand cursor and react to the mouse with a light hover effect, and the tutorial text box shows the hand cursor too, so every clickable part of the app now gives feedback.
 - Performance: posters, cast photos, episode pictures, channel logos, provider logos and the blurred cast background are now decoded at the size they are displayed instead of their full size, which cuts memory use and makes scrolling and opening windows smoother, especially on Windows.

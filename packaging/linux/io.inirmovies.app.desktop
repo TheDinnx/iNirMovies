@@ -1,10 +1,13 @@
 [Desktop Entry]
 Type=Application
+Version=1.0
 Name=iNir Movies
-Comment=Watch Cinemana movies, TV shows and live channels in one fast, simple app
+GenericName=Movies and TV
+Comment=Cinemana movies, TV shows and live channels
 Exec=iNirMovies
+TryExec=iNirMovies
 Icon=io.inirmovies.app
 Terminal=false
-StartupWMClass=io.inirmovies.app
+StartupNotify=true
 Categories=AudioVideo;Video;Player;
-Keywords=movies;series;tv;streaming;cinemana;earthlink;
+Keywords=iNir;Movies;Cinemana;TV;Series;Channels;
